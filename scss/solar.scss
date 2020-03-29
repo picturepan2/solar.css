@@ -86,10 +86,6 @@ body {
     border: .05rem solid rgba($gray-color, .15);
     box-shadow: inset 0 0 1rem rgba($gray-color, .05);
     z-index: 1000;
-
-    & + .solar-card {
-      display: block;
-    }
   }
 
   .solar-object {
@@ -188,6 +184,19 @@ body {
       width: 750vh;
     }
   }
+  &:hover {
+    & ~ .solar-cards {
+      .solar-sun {
+        display: block;
+      }
+    }
+
+    & ~ .solar-captions {
+      .solar-sun {
+        opacity: 1;
+      }
+    }
+  }
 }
 
 // Mercury
@@ -198,6 +207,19 @@ body {
       background: $mercury-color;
       height: object-size($mercury-rad);
       width: object-size($mercury-rad);
+    }
+  }
+  &:hover {
+    & ~ .solar-cards {
+      .solar-mercury {
+        display: block;
+      }
+    }
+
+    & ~ .solar-captions {
+      .solar-mercury {
+        opacity: 1;
+      }
     }
   }
 }
@@ -213,6 +235,19 @@ body {
       width: object-size($venus-rad);
     }
   }
+  &:hover {
+    & ~ .solar-cards {
+      .solar-venus {
+        display: block;
+      }
+    }
+
+    & ~ .solar-captions {
+      .solar-venus {
+        opacity: 1;
+      }
+    }
+  }
 }
 
 // Earth
@@ -224,6 +259,19 @@ body {
       background: $earth-color;
       height: object-size($earth-rad);
       width: object-size($earth-rad);
+    }
+  }
+  &:hover {
+    & ~ .solar-cards {
+      .solar-earth {
+        display: block;
+      }
+    }
+
+    & ~ .solar-captions {
+      .solar-earth {
+        opacity: 1;
+      }
     }
   }
 }
@@ -239,6 +287,19 @@ body {
       width: object-size($mars-rad);
     }
   }
+  &:hover {
+    & ~ .solar-cards {
+      .solar-mars {
+        display: block;
+      }
+    }
+
+    & ~ .solar-captions {
+      .solar-mars {
+        opacity: 1;
+      }
+    }
+  }
 }
 
 // Jupiter
@@ -250,6 +311,19 @@ body {
       background: $jupiter-color;
       height: object-size($jupiter-rad);
       width: object-size($jupiter-rad);
+    }
+  }
+  &:hover {
+    & ~ .solar-cards {
+      .solar-jupiter {
+        display: block;
+      }
+    }
+
+    & ~ .solar-captions {
+      .solar-jupiter {
+        opacity: 1;
+      }
     }
   }
 }
@@ -266,6 +340,19 @@ body {
       width: object-size($saturn-rad);
     }
   }
+  &:hover {
+    & ~ .solar-cards {
+      .solar-saturn {
+        display: block;
+      }
+    }
+
+    & ~ .solar-captions {
+      .solar-saturn {
+        opacity: 1;
+      }
+    }
+  }
 }
 
 // Uranus
@@ -277,6 +364,19 @@ body {
       background: $uranus-color;
       height: object-size($uranus-rad);
       width: object-size($uranus-rad);
+    }
+  }
+  &:hover {
+    & ~ .solar-cards {
+      .solar-uranus {
+        display: block;
+      }
+    }
+
+    & ~ .solar-captions {
+      .solar-uranus {
+        opacity: 1;
+      }
     }
   }
 }
@@ -292,14 +392,54 @@ body {
       width: object-size($neptune-rad);
     }
   }
+  &:hover {
+    & ~ .solar-cards {
+      .solar-neptune {
+        display: block;
+      }
+    }
+
+    & ~ .solar-captions {
+      .solar-neptune {
+        opacity: 1;
+      }
+    }
+  }
 }
 
 // Card
-.solar-card {
-  display: none;
-  position: fixed;
-  right: 2rem;
-  top: 2rem;
+.solar-cards {
+  .solar-card {
+    background: $dark-color;
+    border: .1rem solid rgba($gray-color, .1);
+    border-radius: $border-radius;
+    display: none;
+    padding: .5rem;
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    width: 12rem;
+    z-index: 99999;
+
+    .solar-name {
+      font-size: .8rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .card-subtitle {
+      font-size: .6rem;
+      font-weight: 400;
+      opacity: .75;
+      text-transform: uppercase;
+    }
+
+    .card-head {
+      font-size: .6rem;
+      margin-top: .5rem;
+      opacity: .5;
+    }
+  }
 }
 
 // Captions
@@ -309,7 +449,6 @@ body {
   height: 2rem;
   justify-content: center;
   left: 5vw;
-  opacity: .4;
   position: fixed;
   width: 90vw;
 
@@ -318,6 +457,7 @@ body {
     height: 2rem;
     line-height: 1rem;
     margin-right: 2rem;
+    opacity: .4;
     padding: .5rem;
     position: relative;
 
@@ -349,7 +489,6 @@ body {
 
 // Main
 .solar-system-header {
-  color: $primary-color;
   font-weight: 900;
   left: 0;
   padding: .5rem 1rem;
@@ -359,6 +498,7 @@ body {
   z-index: 10000;
 
   .solar-brand {
+    color: $light-color;
     padding: .25rem;
   }
 }

@@ -1842,10 +1842,6 @@ body {
   z-index: 1000;
 }
 
-.solar-orbit:hover + .solar-card {
-  display: block;
-}
-
 .solar-orbit .solar-object::before {
   border: 10rem solid rgba(24, 24, 24, .15);
   border-radius: 50%;
@@ -1927,6 +1923,14 @@ body {
   width: 750vh;
 }
 
+.solar-sun:hover ~ .solar-cards .solar-sun {
+  display: block;
+}
+
+.solar-sun:hover ~ .solar-captions .solar-sun {
+  opacity: 1;
+}
+
 .solar-mercury .solar-object {
   width: 1.0991vh;
 }
@@ -1935,6 +1939,14 @@ body {
   background: #f9af0e;
   height: 109.90984vh;
   width: 109.90984vh;
+}
+
+.solar-mercury:hover ~ .solar-cards .solar-mercury {
+  display: block;
+}
+
+.solar-mercury:hover ~ .solar-captions .solar-mercury {
+  opacity: 1;
 }
 
 .solar-venus .solar-object {
@@ -1947,6 +1959,14 @@ body {
   width: 124.57964vh;
 }
 
+.solar-venus:hover ~ .solar-cards .solar-venus {
+  display: block;
+}
+
+.solar-venus:hover ~ .solar-captions .solar-venus {
+  opacity: 1;
+}
+
 .solar-earth .solar-object {
   width: 1.25875vh;
 }
@@ -1955,6 +1975,14 @@ body {
   background: #538fc1;
   height: 125.87523vh;
   width: 125.87523vh;
+}
+
+.solar-earth:hover ~ .solar-cards .solar-earth {
+  display: block;
+}
+
+.solar-earth:hover ~ .solar-captions .solar-earth {
+  opacity: 1;
 }
 
 .solar-mars .solar-object {
@@ -1967,6 +1995,14 @@ body {
   width: 113.76817vh;
 }
 
+.solar-mars:hover ~ .solar-cards .solar-mars {
+  display: block;
+}
+
+.solar-mars:hover ~ .solar-captions .solar-mars {
+  opacity: 1;
+}
+
 .solar-jupiter .solar-object {
   width: 3.83937vh;
 }
@@ -1975,6 +2011,14 @@ body {
   background: #e96b77;
   height: 383.93713vh;
   width: 383.93713vh;
+}
+
+.solar-jupiter:hover ~ .solar-cards .solar-jupiter {
+  display: block;
+}
+
+.solar-jupiter:hover ~ .solar-captions .solar-jupiter {
+  opacity: 1;
 }
 
 .solar-saturn .solar-object {
@@ -1988,6 +2032,14 @@ body {
   width: 336.50394vh;
 }
 
+.solar-saturn:hover ~ .solar-cards .solar-saturn {
+  display: block;
+}
+
+.solar-saturn:hover ~ .solar-captions .solar-saturn {
+  opacity: 1;
+}
+
 .solar-uranus .solar-object {
   width: 2.03005vh;
 }
@@ -1996,6 +2048,14 @@ body {
   background: #86e5f8;
   height: 203.00544vh;
   width: 203.00544vh;
+}
+
+.solar-uranus:hover ~ .solar-cards .solar-uranus {
+  display: block;
+}
+
+.solar-uranus:hover ~ .solar-captions .solar-uranus {
+  opacity: 1;
 }
 
 .solar-neptune .solar-object {
@@ -2008,11 +2068,44 @@ body {
   width: 200vh;
 }
 
-.solar-card {
+.solar-neptune:hover ~ .solar-cards .solar-neptune {
+  display: block;
+}
+
+.solar-neptune:hover ~ .solar-captions .solar-neptune {
+  opacity: 1;
+}
+
+.solar-cards .solar-card {
+  background: #181818;
+  border: .1rem solid rgba(190, 190, 190, .1);
+  border-radius: .1rem;
   display: none;
+  padding: .5rem;
   position: fixed;
-  right: 2rem;
-  top: 2rem;
+  right: 1rem;
+  top: 1rem;
+  width: 12rem;
+  z-index: 99999;
+}
+
+.solar-cards .solar-card .solar-name {
+  font-size: .8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.solar-cards .solar-card .card-subtitle {
+  font-size: .6rem;
+  font-weight: 400;
+  opacity: .75;
+  text-transform: uppercase;
+}
+
+.solar-cards .solar-card .card-head {
+  font-size: .6rem;
+  margin-top: .5rem;
+  opacity: .5;
 }
 
 .solar-captions {
@@ -2023,7 +2116,6 @@ body {
   height: 2rem;
   justify-content: center;
   left: 5vw;
-  opacity: .4;
   position: fixed;
   width: 90vw;
 }
@@ -2034,6 +2126,7 @@ body {
   height: 2rem;
   line-height: 1rem;
   margin-right: 2rem;
+  opacity: .4;
   padding: .5rem;
   position: relative;
 }
@@ -2063,7 +2156,6 @@ body {
 }
 
 .solar-system-header {
-  color: #fa6d00;
   font-weight: 900;
   left: 0;
   padding: .5rem 1rem;
@@ -2074,5 +2166,6 @@ body {
 }
 
 .solar-system-header .solar-brand {
+  color: #fff;
   padding: .25rem;
 }
