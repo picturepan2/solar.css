@@ -295,21 +295,21 @@ body {
 }
 
 a {
-  color: #fa6d00;
+  color: #fff;
   outline: none;
   text-decoration: none;
 }
 
 a:focus {
-  box-shadow: 0 0 0 .1rem rgba(250, 109, 0, .2);
+  box-shadow: 0 0 0 .1rem rgba(255, 255, 255, .2);
 }
 
 a:focus,
 a:hover,
 a:active,
 a.active {
-  color: #c75700;
-  text-decoration: underline;
+  color: #e6e6e6;
+  text-decoration: none;
 }
 
 h1,
@@ -455,9 +455,9 @@ dl dd {
   -moz-appearance: none;
   appearance: none;
   background: transparent;
-  border: .05rem solid #fa6d00;
+  border: .05rem solid #fff;
   border-radius: 1.6rem;
-  color: #fa6d00;
+  color: #fff;
   cursor: pointer;
   display: inline-block;
   font-size: .8rem;
@@ -477,21 +477,21 @@ dl dd {
 }
 
 .btn:focus {
-  box-shadow: 0 0 0 .1rem rgba(250, 109, 0, .2);
+  box-shadow: 0 0 0 .1rem rgba(255, 255, 255, .2);
 }
 
 .btn:focus,
 .btn:hover {
-  background: #fa6d00;
-  border-color: #eb6600;
+  background: #fff;
+  border-color: #f7f7f7;
   color: #fff;
   text-decoration: none;
 }
 
 .btn:active,
 .btn.active {
-  background: #eb6600;
-  border-color: #d15b00;
+  background: #f7f7f7;
+  border-color: #ebebeb;
   color: #fff;
   text-decoration: none;
 }
@@ -511,23 +511,23 @@ dl dd {
 }
 
 .btn.btn-primary {
-  background: #fa6d00;
-  border-color: #eb6600;
-  box-shadow: 0 .1rem 1rem rgba(250, 109, 0, .45);
+  background: #fff;
+  border-color: #f7f7f7;
+  box-shadow: 0 .1rem 1rem rgba(255, 255, 255, .45);
   color: #fff;
 }
 
 .btn.btn-primary:focus,
 .btn.btn-primary:hover {
-  background: #e16200;
-  border-color: #d15b00;
+  background: #f2f2f2;
+  border-color: #ebebeb;
   color: #fff;
 }
 
 .btn.btn-primary:active,
 .btn.btn-primary.active {
-  background: #d65d00;
-  border-color: #c75700;
+  background: #ededed;
+  border-color: #e6e6e6;
   color: #fff;
 }
 
@@ -665,13 +665,13 @@ dl dd {
 }
 
 .label.label-primary {
-  background: #fa6d00;
+  background: #fff;
   color: #fff;
 }
 
 .label.label-secondary {
   background: #dedede;
-  color: #fa6d00;
+  color: #fff;
 }
 
 .label.label-success {
@@ -1172,16 +1172,16 @@ dl dd {
 }
 
 .text-primary {
-  color: #fa6d00 !important;
+  color: #fff !important;
 }
 
 a.text-primary:focus,
 a.text-primary:hover {
-  color: #e16200;
+  color: #f2f2f2;
 }
 
 a.text-primary:visited {
-  color: #ff7b15;
+  color: white;
 }
 
 .text-secondary {
@@ -1276,8 +1276,7 @@ a.text-error:visited {
 }
 
 .bg-primary {
-  background: #fa6d00 !important;
-  color: #fff;
+  background: #fff !important;
 }
 
 .bg-secondary {
@@ -1447,7 +1446,7 @@ a.text-error:visited {
 
 .loading::after {
   animation: loading 500ms infinite linear;
-  border: .1rem solid #fa6d00;
+  border: .1rem solid #fff;
   border-radius: 50%;
   border-right-color: transparent;
   border-top-color: transparent;
@@ -1807,7 +1806,6 @@ a.text-error:visited {
 body {
   background: #181818;
   color: #bebebe;
-  overflow: hidden;
 }
 
 .solar-system {
@@ -1818,10 +1816,7 @@ body {
   -ms-flex-pack: center;
   height: 100vh;
   justify-content: center;
-  left: 0;
   overflow: hidden;
-  position: fixed;
-  top: 0;
   width: 100vw;
 }
 
@@ -1840,6 +1835,14 @@ body {
   border: .05rem solid rgba(190, 190, 190, .15);
   box-shadow: inset 0 0 1rem rgba(190, 190, 190, .05);
   z-index: 1000;
+}
+
+.solar-orbit .solar-object {
+  height: 0;
+  left: 100%;
+  position: absolute;
+  top: 50%;
+  width: 0 !important;
 }
 
 .solar-orbit .solar-object::before {
@@ -1916,7 +1919,14 @@ body {
   z-index: 20;
 }
 
-.solar-sun .solar-object::before {
+.solar-orbit .solar-moon {
+  animation: orbit .748s linear infinite;
+  height: .5rem;
+  top: 100%;
+  width: .5rem;
+}
+
+.solar-sun > .solar-object::before {
   background: #fa6d00;
   box-shadow: 0 0 200rem rgba(250, 109, 0, .25);
   height: 750vh;
@@ -1931,11 +1941,11 @@ body {
   opacity: 1;
 }
 
-.solar-mercury .solar-object {
+.solar-mercury > .solar-object {
   width: 1.0991vh;
 }
 
-.solar-mercury .solar-object::before {
+.solar-mercury > .solar-object::before {
   background: #f9af0e;
   height: 109.90984vh;
   width: 109.90984vh;
@@ -1949,11 +1959,11 @@ body {
   opacity: 1;
 }
 
-.solar-venus .solar-object {
+.solar-venus > .solar-object {
   width: 1.2458vh;
 }
 
-.solar-venus .solar-object::before {
+.solar-venus > .solar-object::before {
   background: #f1b72c;
   height: 124.57964vh;
   width: 124.57964vh;
@@ -1967,11 +1977,11 @@ body {
   opacity: 1;
 }
 
-.solar-earth .solar-object {
+.solar-earth > .solar-object {
   width: 1.25875vh;
 }
 
-.solar-earth .solar-object::before {
+.solar-earth > .solar-object::before {
   background: #538fc1;
   height: 125.87523vh;
   width: 125.87523vh;
@@ -1985,11 +1995,11 @@ body {
   opacity: 1;
 }
 
-.solar-mars .solar-object {
+.solar-mars > .solar-object {
   width: 1.13768vh;
 }
 
-.solar-mars .solar-object::before {
+.solar-mars > .solar-object::before {
   background: #f5805b;
   height: 113.76817vh;
   width: 113.76817vh;
@@ -2003,11 +2013,11 @@ body {
   opacity: 1;
 }
 
-.solar-jupiter .solar-object {
+.solar-jupiter > .solar-object {
   width: 3.83937vh;
 }
 
-.solar-jupiter .solar-object::before {
+.solar-jupiter > .solar-object::before {
   background: #e96b77;
   height: 383.93713vh;
   width: 383.93713vh;
@@ -2021,11 +2031,11 @@ body {
   opacity: 1;
 }
 
-.solar-saturn .solar-object {
+.solar-saturn > .solar-object {
   width: 3.36504vh;
 }
 
-.solar-saturn .solar-object::before {
+.solar-saturn > .solar-object::before {
   background: #e7a155;
   box-shadow: 0 0 0 20rem #181818, 0 0 0 40rem rgba(231, 161, 85, .2), 0 0 0 60rem rgba(231, 161, 85, .1);
   height: 336.50394vh;
@@ -2040,11 +2050,11 @@ body {
   opacity: 1;
 }
 
-.solar-uranus .solar-object {
+.solar-uranus > .solar-object {
   width: 2.03005vh;
 }
 
-.solar-uranus .solar-object::before {
+.solar-uranus > .solar-object::before {
   background: #86e5f8;
   height: 203.00544vh;
   width: 203.00544vh;
@@ -2058,11 +2068,11 @@ body {
   opacity: 1;
 }
 
-.solar-neptune .solar-object {
+.solar-neptune > .solar-object {
   width: 2vh;
 }
 
-.solar-neptune .solar-object::before {
+.solar-neptune > .solar-object::before {
   background: #95b4fb;
   height: 200vh;
   width: 200vh;
@@ -2074,6 +2084,12 @@ body {
 
 .solar-neptune:hover ~ .solar-captions .solar-neptune {
   opacity: 1;
+}
+
+.solar-moon > .solar-object::before {
+  background: #a9d3ee;
+  height: .05rem;
+  width: .05rem;
 }
 
 .solar-cards .solar-card {
@@ -2156,16 +2172,44 @@ body {
 }
 
 .solar-system-header {
+  align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
   font-weight: 900;
   left: 0;
   padding: .5rem 1rem;
   position: fixed;
-  text-decoration: underline;
   top: 0;
   z-index: 10000;
 }
 
 .solar-system-header .solar-brand {
-  color: #fff;
-  padding: .25rem;
+  color: #bebebe;
+}
+
+.solar-system-header .solar-brand:hover,
+.solar-system-header .solar-brand:focus {
+  opacity: .75;
+}
+
+.solar-system-header .solar-github {
+  border: .05rem solid #bebebe;
+  border-radius: .1rem;
+  color: #bebebe;
+  font-size: .6rem;
+  height: 1.2rem;
+  margin-left: .5rem;
+  padding: .1rem .2rem;
+}
+
+.solar-system-header .solar-github:hover,
+.solar-system-header .solar-github:focus {
+  opacity: .75;
+}
+
+.solar-ads {
+  display: block;
+  height: 25vh;
+  width: 100vw;
 }

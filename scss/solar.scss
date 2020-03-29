@@ -57,7 +57,6 @@ $moon-period: 0.0748;
 body {
   background: $dark-color;
   color: $gray-color;
-  overflow: hidden;
 }
 
 .solar-system {
@@ -65,10 +64,7 @@ body {
   display: flex;
   height: 100vh;
   justify-content: center;
-  left: 0;
   overflow: hidden;
-  top: 0;
-  position: fixed;
   width: 100vw;
 }
 
@@ -89,6 +85,12 @@ body {
   }
 
   .solar-object {
+    height: 0;
+    left: 100%;
+    position: absolute;
+    top: 50%;
+    width: 0 !important;
+    
     &::before {
       border: 10rem solid rgba($dark-color, .15);
       border-radius: 50%;
@@ -172,11 +174,19 @@ body {
     width: orbit-size($neptune-distance);
     z-index: 20;
   }
+
+  // Moon
+  .solar-moon {
+    animation: orbit ($base-period * $moon-period) linear infinite;
+    height: .5rem;
+    top: 100%;
+    width: .5rem;
+  }
 }
 
 // Sun
 .solar-sun {
-  .solar-object {
+  & > .solar-object {
     &::before {
       background: $sun-color;
       box-shadow: 0 0 200rem rgba($sun-color, .25);
@@ -201,8 +211,9 @@ body {
 
 // Mercury
 .solar-mercury {
-  .solar-object {
+  & > .solar-object {
     width: object-size($mercury-rad) / 100;
+
     &::before {
       background: $mercury-color;
       height: object-size($mercury-rad);
@@ -226,7 +237,7 @@ body {
 
 // Venus
 .solar-venus {
-  .solar-object {
+  & > .solar-object {
     width: object-size($venus-rad) / 100;
 
     &::before {
@@ -252,7 +263,7 @@ body {
 
 // Earth
 .solar-earth {
-  .solar-object {
+  & > .solar-object {
     width: object-size($earth-rad) / 100;
 
     &::before {
@@ -278,7 +289,7 @@ body {
 
 // Mars
 .solar-mars {
-  .solar-object {
+  & > .solar-object {
     width: object-size($mars-rad) / 100;
 
     &::before {
@@ -304,7 +315,7 @@ body {
 
 // Jupiter
 .solar-jupiter {
-  .solar-object {
+  & > .solar-object {
     width: object-size($jupiter-rad) / 100;
 
     &::before {
@@ -330,7 +341,7 @@ body {
 
 // Saturn
 .solar-saturn {
-  .solar-object {
+  & > .solar-object {
     width: object-size($saturn-rad) / 100;
 
     &::before {
@@ -357,7 +368,7 @@ body {
 
 // Uranus
 .solar-uranus {
-  .solar-object {
+  & > .solar-object {
     width: object-size($uranus-rad) / 100;
 
     &::before {
@@ -383,7 +394,7 @@ body {
 
 // Neptune
 .solar-neptune {
-  .solar-object {
+  & > .solar-object {
     width: object-size($neptune-rad) / 100;
 
     &::before {
@@ -403,6 +414,17 @@ body {
       .solar-neptune {
         opacity: 1;
       }
+    }
+  }
+}
+
+// Moon
+.solar-moon {
+  & > .solar-object {
+    &::before {
+      background: $moon-color;
+      height: .05rem;
+      width: .05rem;
     }
   }
 }
@@ -489,17 +511,42 @@ body {
 
 // Main
 .solar-system-header {
+  align-items: center;
+  display: flex;
   font-weight: 900;
   left: 0;
   padding: .5rem 1rem;
   position: fixed;
-  text-decoration: underline;
   top: 0;
   z-index: 10000;
 
   .solar-brand {
-    color: $light-color;
-    padding: .25rem;
+    color: $gray-color;
+
+    &:hover,
+    &:focus {
+      opacity: .75;
+    }
+  }
+
+  .solar-github {
+    border: .05rem solid $gray-color;
+    border-radius: $border-radius;
+    color: $gray-color;
+    font-size: .6rem;
+    height: 1.2rem;
+    margin-left: .5rem;
+    padding: .1rem .2rem;
+
+    &:hover,
+    &:focus {
+      opacity: .75;
+    }
   }
 }
 
+.solar-ads {
+  display: block;
+  height: 25vh;
+  width: 100vw;
+}

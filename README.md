@@ -1,6 +1,8 @@
 # Solar.css
 ## Pure CSS Solar System Animation
 
+## Data
+
 |Object       |Radius (km) |Sidereal Period (yr) |Distance to the Sun (km) |
 |-------------|------------|---------------------|-------------------------|
 |Sun          |696000      |-                    |-                        |
@@ -13,3 +15,8 @@
 |Uranus       |25362       |84.01                |2872400000               |
 |Neptune      |24622       |164.8                |4498400000               |
 |Moon (Earth) |1737        |0.0748               |-                        |
+
+## Sources
+
+- [NASA Solar System Exploration](https://solarsystem.nasa.gov/)
+- [Solar System - Wikipedia](https://en.wikipedia.org/wiki/Solar_System)
