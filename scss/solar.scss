@@ -1,7 +1,11 @@
 // Core variables and mixins
 @import "variables";
 @import "mixins";
-
 @import "spectre";
 
 /*! Solar.css | MIT License */
+body {
+  background: $dark-color;
+
+
+}
