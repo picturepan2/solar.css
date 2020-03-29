@@ -8,7 +8,8 @@ block variables
   - var description = 'Solar.css'
 
 block content
-  .solar-system-header SOLAR.CSS
+  .solar-system-header
+    a.solar-brand(href= url, target="_blank") SOLAR.CSS
   .solar-system
     .solar-orbit.solar-sun
       .solar-object
@@ -21,6 +22,8 @@ block content
     .solar-card.solar-venus
     .solar-orbit.solar-earth
       .solar-object
+      .solar-orbit.solar-moon
+        .solar-object
     .solar-card.solar-earth
     .solar-orbit.solar-mars
       .solar-object
@@ -37,5 +40,25 @@ block content
     .solar-orbit.solar-neptune
       .solar-object
     .solar-card.solar-neptune
-
+    .solar-labels
+      .solar-label.solar-sun
+        .solar-object
+      .solar-label.solar-mercury
+        .solar-object
+      .solar-label.solar-venus
+        .solar-object
+      .solar-label.solar-earth
+        .solar-object
+        .solar-label.solar-moon
+          .solar-object
+      .solar-label.solar-mars
+        .solar-object
+      .solar-label.solar-jupiter
+        .solar-object
+      .solar-label.solar-saturn
+        .solar-object
+      .solar-label.solar-uranus
+        .solar-object
+      .solar-label.solar-neptune
+        .solar-object
       

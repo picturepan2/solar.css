@@ -80,6 +80,7 @@ body {
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
+  transition: border .2s ease-in-out;
 
   &:hover {
     border: .05rem solid rgba($gray-color, .15);
@@ -235,9 +236,24 @@ body {
   top: 2rem;
 }
 
+.solar-labels {
+  bottom: 1rem;
+  position: fixed;
+}
+
 // Main
 .solar-system-header {
   color: $primary-color;
   font-weight: 900;
+  left: 0;
   padding: .5rem 1rem;
+  position: fixed;
+  text-decoration: underline;
+  top: 0;
+  z-index: 10000;
+
+  .solar-brand {
+    padding: .25rem;
+  }
 }
+

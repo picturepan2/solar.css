@@ -1833,6 +1833,7 @@ body {
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
+  transition: border .2s ease-in-out;
 }
 
 .solar-orbit:hover {
@@ -1979,8 +1980,22 @@ body {
   top: 2rem;
 }
 
+.solar-labels {
+  bottom: 1rem;
+  position: fixed;
+}
+
 .solar-system-header {
   color: #fa6d00;
   font-weight: 900;
+  left: 0;
   padding: .5rem 1rem;
+  position: fixed;
+  text-decoration: underline;
+  top: 0;
+  z-index: 10000;
+}
+
+.solar-system-header .solar-brand {
+  padding: .25rem;
 }
