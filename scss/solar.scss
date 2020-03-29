@@ -56,6 +56,7 @@ $moon-period: 0.0748;
 /*! Solar.css | MIT License */
 body {
   background: $dark-color;
+  color: $gray-color;
   overflow: hidden;
 }
 
@@ -82,6 +83,11 @@ body {
 
   &:hover {
     border: .05rem solid rgba($gray-color, .15);
+    z-index: 1000;
+
+    & + .solar-card {
+      display: block;
+    }
   }
 
   .solar-object {
@@ -92,7 +98,7 @@ body {
     top: 50%;
     transform: translate(-50%, -50%) scale(.01);
   }
-  
+
   // Sun
   &.solar-sun {
     border: 0;
@@ -220,17 +226,18 @@ body {
       width: object-size($neptune-rad);
     }
   }
+}
 
-  &.solar-venus {
-    animation: orbit ($base-period * $venus-period) linear infinite;
-    height: orbit-size($venus-distance);
-    width: orbit-size($venus-distance);
-    z-index: 10;
+.solar-card {
+  display: none;
+  position: fixed;
+  right: 2rem;
+  top: 2rem;
+}
 
-    .solar-object {
-      background: $venus-color;
-      height: object-size($venus-rad);
-      width: object-size($venus-rad);
-    }
-  }
+// Main
+.solar-system-header {
+  color: $primary-color;
+  font-weight: 900;
+  padding: .5rem 1rem;
 }

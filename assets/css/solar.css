@@ -1806,6 +1806,7 @@ a.text-error:visited {
 /*! Solar.css | MIT License */
 body {
   background: #181818;
+  color: #bebebe;
   overflow: hidden;
 }
 
@@ -1836,6 +1837,11 @@ body {
 
 .solar-orbit:hover {
   border: .05rem solid rgba(190, 190, 190, .15);
+  z-index: 1000;
+}
+
+.solar-orbit:hover + .solar-card {
+  display: block;
 }
 
 .solar-orbit .solar-object {
@@ -1966,15 +1972,15 @@ body {
   width: 200vh;
 }
 
-.solar-orbit.solar-venus {
-  animation: orbit 3.075s linear infinite;
-  height: 14.20772vh;
-  width: 14.20772vh;
-  z-index: 10;
+.solar-card {
+  display: none;
+  position: fixed;
+  right: 2rem;
+  top: 2rem;
 }
 
-.solar-orbit.solar-venus .solar-object {
-  background: #f1b72c;
-  height: 124.57964vh;
-  width: 124.57964vh;
+.solar-system-header {
+  color: #fa6d00;
+  font-weight: 900;
+  padding: .5rem 1rem;
 }
