@@ -1,11 +1,207 @@
-// Core variables and mixins
+//- Core variables and mixins
 @import "variables";
 @import "mixins";
+@import "functions";
 @import "spectre";
+
+//- Core variables
+$base-rad: .2rem;
+$max-rad: 2.5rem;
+$base-distance: 5vw;
+$max-distance: 75vw;
+//- Color
+$sun-color: #FA6D00;
+$mercury-color: #F9AF0E;
+$venus-color: #F1B72C;
+$earth-color: #538FC1;
+$mars-color: #F5805B;
+$jupiter-color: #E96B77;
+$saturn-color: #E7A155;
+$uranus-color: #86E5F8;
+$neptune-color: #95B4FB;
+$moon-color: #A9D3EE;
+//- Radius
+$sun-rad: 696000;
+$mercury-rad: 2440;
+$venus-rad: 6052;
+$earth-rad: 6371;
+$mars-rad: 3390;
+$jupiter-rad: 69911;
+$saturn-rad: 58232;
+$uranus-rad: 25362;
+$neptune-rad: 24622;
+$moon-rad: 1737;
+//- Distance
+$sun-distance: 696;
+$mercury-distance: 57909;
+$venus-distance: 108160;
+$earth-distance: 149600;
+$mars-distance: 227990;
+$jupiter-distance: 778360;
+$saturn-distance: 1433500;
+$uranus-distance: 2872400;
+$neptune-distance: 4498400;
+//- Period
+$mercury-period: 0.240846;
+$venus-period: 0.615;
+$earth-period: 1;
+$mars-period: 1.881;
+$jupiter-period: 11.86;
+$saturn-period: 29.46;
+$uranus-period: 84.01;
+$neptune-period: 164.8;
+$moon-period: 0.0748;
 
 /*! Solar.css | MIT License */
 body {
   background: $dark-color;
+  overflow: hidden;
+}
 
+.solar-system {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  position: relative;
+  width: 100vw;
+}
 
+.solar-orbit {
+  border: .05rem solid rgba($gray-color, .05);
+  border-radius: 50%;
+  display: block;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  .solar-object {
+    border-radius: 50%;
+    display: block;
+    left: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  // Sun
+  &.solar-sun {
+    border: 0;
+    height: 0;
+    width: 0;
+
+    .solar-object {
+      background: $sun-color;
+      height: object-size($sun-rad);
+      width: object-size($sun-rad);
+    }
+  }
+
+  // Mercury
+  &.solar-mercury {
+    height: orbit-size($mercury-distance);
+    width: orbit-size($mercury-distance);
+
+    .solar-object {
+      background: $mercury-color;
+      height: object-size($mercury-rad);
+      width: object-size($mercury-rad);
+    }
+  }
+
+  // Venus
+  &.solar-venus {
+    height: orbit-size($venus-distance);
+    width: orbit-size($venus-distance);
+
+    .solar-object {
+      background: $venus-color;
+      height: object-size($venus-rad);
+      width: object-size($venus-rad);
+    }
+  }
+
+  // Earth
+  &.solar-earth {
+    height: orbit-size($earth-distance);
+    width: orbit-size($earth-distance);
+
+    .solar-object {
+      background: $earth-color;
+      height: object-size($earth-rad);
+      width: object-size($earth-rad);
+    }
+  }
+
+  // Mars
+  &.solar-mars {
+    height: orbit-size($mars-distance);
+    width: orbit-size($mars-distance);
+
+    .solar-object {
+      background: $mars-color;
+      height: object-size($mars-rad);
+      width: object-size($mars-rad);
+    }
+  }
+
+  // Jupiter
+  &.solar-jupiter {
+    height: orbit-size($jupiter-distance);
+    width: orbit-size($jupiter-distance);
+
+    .solar-object {
+      background: $jupiter-color;
+      height: object-size($jupiter-rad);
+      width: object-size($jupiter-rad);
+    }
+  }
+
+  // Saturn
+  &.solar-saturn {
+    height: orbit-size($saturn-distance);
+    width: orbit-size($saturn-distance);
+
+    .solar-object {
+      background: $saturn-color;
+      height: object-size($saturn-rad);
+      width: object-size($saturn-rad);
+    }
+  }
+
+  // Uranus
+  &.solar-uranus {
+    height: orbit-size($uranus-distance);
+    width: orbit-size($uranus-distance);
+
+    .solar-object {
+      background: $uranus-color;
+      height: object-size($uranus-rad);
+      width: object-size($uranus-rad);
+    }
+  }
+
+  // Neptune
+  &.solar-neptune {
+    height: orbit-size($neptune-distance);
+    width: orbit-size($neptune-distance);
+
+    .solar-object {
+      background: $neptune-color;
+      height: object-size($neptune-rad);
+      width: object-size($neptune-rad);
+    }
+  }
+
+  &.solar-venus {
+    height: orbit-size($venus-distance);
+    width: orbit-size($venus-distance);
+
+    .solar-object {
+      background: $venus-color;
+      height: object-size($venus-rad);
+      width: object-size($venus-rad);
+    }
+  }
 }

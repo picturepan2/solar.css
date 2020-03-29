@@ -6,8 +6,8 @@ block variables
   - var slug = ''
   - var parent = ''
   - var lang = 'en'
-  - var title = ''
-  - var description = ''
+  - var title = 'Solar.css'
+  - var description = 'Solar.css'
 
 if slug == parent
   if slug == 'index'
@@ -31,9 +31,9 @@ html(lang= lang)
     meta(property='og:type' content='website')
     meta(property='og:description' content= description)
     if slug != parent
-      link(rel='stylesheet' href='../assets/css/solar.min.css')
+      link(rel='stylesheet' href='../assets/css/solar.css')
     else
-      link(rel='stylesheet' href='assets/css/solar.min.css')
+      link(rel='stylesheet' href='assets/css/solar.css')
     link(rel='canonical' href= url)
     
 

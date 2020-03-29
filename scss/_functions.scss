@@ -1,0 +1,10 @@
+// Functions
+@function orbit-size($base) {
+  $result: ($base / $neptune-distance) * $max-distance + $base-distance;
+  @return $result;
+}
+
+@function object-size($base) {
+  $result: ($base / $sun-rad) * $max-rad + $base-rad;
+  @return $result;
+}
