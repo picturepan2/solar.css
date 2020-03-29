@@ -652,7 +652,7 @@ dl dd {
 .label {
   background: #ececec;
   border-radius: .1rem;
-  color: #323131;
+  color: #323232;
   display: inline-block; 
   line-height: 1.2;
   padding: .1rem .2rem;
@@ -1162,6 +1162,15 @@ dl dd {
   }
 }
 
+@keyframes orbit {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
 .text-primary {
   color: #fa6d00 !important;
 }
@@ -1198,7 +1207,7 @@ a.text-gray:hover {
 }
 
 a.text-gray:visited {
-  color: #cbcaca;
+  color: #cbcbcb;
 }
 
 .text-light {
@@ -1224,7 +1233,7 @@ a.text-dark:hover {
 }
 
 a.text-dark:visited {
-  color: #323131;
+  color: #323232;
 }
 
 .text-success {

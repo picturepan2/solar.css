@@ -652,7 +652,7 @@ dl dd {
 .label {
   background: #ececec;
   border-radius: .1rem;
-  color: #323131;
+  color: #323232;
   display: inline-block; 
   line-height: 1.2;
   padding: .1rem .2rem;
@@ -1162,6 +1162,15 @@ dl dd {
   }
 }
 
+@keyframes orbit {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
 .text-primary {
   color: #fa6d00 !important;
 }
@@ -1198,7 +1207,7 @@ a.text-gray:hover {
 }
 
 a.text-gray:visited {
-  color: #cbcaca;
+  color: #cbcbcb;
 }
 
 .text-light {
@@ -1224,7 +1233,7 @@ a.text-dark:hover {
 }
 
 a.text-dark:visited {
-  color: #323131;
+  color: #323232;
 }
 
 .text-success {
@@ -1808,7 +1817,10 @@ body {
   -ms-flex-pack: center;
   height: 100vh;
   justify-content: center;
-  position: relative;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
   width: 100vw;
 }
 
@@ -1839,105 +1851,115 @@ body {
 
 .solar-orbit.solar-sun .solar-object {
   background: #fa6d00;
-  height: 2.7rem;
-  width: 2.7rem;
+  height: 2.75rem;
+  width: 2.75rem;
 }
 
 .solar-orbit.solar-mercury {
-  height: 5.9654932865vw;
-  width: 5.9654932865vw;
+  animation: orbit 1.20423s linear infinite;
+  height: 5.96549vw;
+  width: 5.96549vw;
 }
 
 .solar-orbit.solar-mercury .solar-object {
   background: #f9af0e;
-  height: .2087643678rem;
-  width: .2087643678rem;
+  height: .25876rem;
+  width: .25876rem;
 }
 
 .solar-orbit.solar-venus {
-  height: 6.8033078428vw;
-  width: 6.8033078428vw;
+  animation: orbit 3.075s linear infinite;
+  height: 6.80331vw;
+  width: 6.80331vw;
 }
 
 .solar-orbit.solar-venus .solar-object {
   background: #f1b72c;
-  height: .2217385057rem;
-  width: .2217385057rem;
+  height: .27174rem;
+  width: .27174rem;
 }
 
 .solar-orbit.solar-earth {
-  height: 7.4942201672vw;
-  width: 7.4942201672vw;
+  animation: orbit 5s linear infinite;
+  height: 7.49422vw;
+  width: 7.49422vw;
 }
 
 .solar-orbit.solar-earth .solar-object {
   background: #538fc1;
-  height: .2228843391rem;
-  width: .2228843391rem;
+  height: .27288rem;
+  width: .27288rem;
 }
 
 .solar-orbit.solar-mars {
-  height: 8.8011848657vw;
-  width: 8.8011848657vw;
+  animation: orbit 9.405s linear infinite;
+  height: 8.80118vw;
+  width: 8.80118vw;
 }
 
 .solar-orbit.solar-mars .solar-object {
   background: #f5805b;
-  height: .2121767241rem;
-  width: .2121767241rem;
+  height: .26218rem;
+  width: .26218rem;
 }
 
 .solar-orbit.solar-jupiter {
-  height: 17.977280811vw;
-  width: 17.977280811vw;
+  animation: orbit 59.3s linear infinite;
+  height: 17.97728vw;
+  width: 17.97728vw;
 }
 
 .solar-orbit.solar-jupiter .solar-object {
   background: #e96b77;
-  height: .4511170977rem;
-  width: .4511170977rem;
+  height: .50112rem;
+  width: .50112rem;
 }
 
 .solar-orbit.solar-saturn {
-  height: 28.9001645029vw;
-  width: 28.9001645029vw;
+  animation: orbit 147.3s linear infinite;
+  height: 28.90016vw;
+  width: 28.90016vw;
 }
 
 .solar-orbit.solar-saturn .solar-object {
   background: #e7a155;
-  height: .4091666667rem;
-  width: .4091666667rem;
+  box-shadow: 0 0 0 .1rem #181818, 0 0 0 .2rem rgba(231, 161, 85, .2), 0 0 0 .3rem rgba(231, 161, 85, .1);
+  height: .45917rem;
+  width: .45917rem;
 }
 
 .solar-orbit.solar-uranus {
-  height: 52.8903610173vw;
-  width: 52.8903610173vw;
+  animation: orbit 420.05s linear infinite;
+  height: 52.89036vw;
+  width: 52.89036vw;
 }
 
 .solar-orbit.solar-uranus .solar-object {
   background: #86e5f8;
-  height: .2910991379rem;
-  width: .2910991379rem;
+  height: .3411rem;
+  width: .3411rem;
 }
 
 .solar-orbit.solar-neptune {
+  animation: orbit 824s linear infinite;
   height: 80vw;
   width: 80vw;
 }
 
 .solar-orbit.solar-neptune .solar-object {
   background: #95b4fb;
-  height: .288441092rem;
-  width: .288441092rem;
+  height: .33844rem;
+  width: .33844rem;
 }
 
 .solar-orbit.solar-venus {
-  height: 6.8033078428vw;
-  width: 6.8033078428vw;
+  animation: orbit 3.075s linear infinite;
+  height: 6.80331vw;
+  width: 6.80331vw;
 }
 
 .solar-orbit.solar-venus .solar-object {
   background: #f1b72c;
-  height: .2217385057rem;
-  width: .2217385057rem;
+  height: .27174rem;
+  width: .27174rem;
 }

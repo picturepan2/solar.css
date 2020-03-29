@@ -21,7 +21,7 @@ gulp.task('watch', function() {
 function css() {
   return gulp
     .src(paths.scss)
-    .pipe(sass({outputStyle: 'compact', precision: 10})
+    .pipe(sass({outputStyle: 'compact', precision: 5})
       .on('error', sass.logError)
     )
     .pipe(autoprefixer())
