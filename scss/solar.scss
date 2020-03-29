@@ -9,7 +9,7 @@ $base-rad: 100vh;
 $max-rad: 100vh;
 $base-distance: 10vh;
 $max-distance: 175vh;
-$base-period: 5s;
+$base-period: 10s;
 //- Color
 $sun-color: #FA6D00;
 $mercury-color: #F9AF0E;
@@ -84,6 +84,7 @@ body {
 
   &:hover {
     border: .05rem solid rgba($gray-color, .15);
+    box-shadow: inset 0 0 1rem rgba($gray-color, .05);
     z-index: 1000;
 
     & + .solar-card {
@@ -192,6 +193,7 @@ body {
 // Mercury
 .solar-mercury {
   .solar-object {
+    width: object-size($mercury-rad) / 100;
     &::before {
       background: $mercury-color;
       height: object-size($mercury-rad);
@@ -203,6 +205,8 @@ body {
 // Venus
 .solar-venus {
   .solar-object {
+    width: object-size($venus-rad) / 100;
+
     &::before {
       background: $venus-color;
       height: object-size($venus-rad);
@@ -214,6 +218,8 @@ body {
 // Earth
 .solar-earth {
   .solar-object {
+    width: object-size($earth-rad) / 100;
+
     &::before {
       background: $earth-color;
       height: object-size($earth-rad);
@@ -225,6 +231,8 @@ body {
 // Mars
 .solar-mars {
   .solar-object {
+    width: object-size($mars-rad) / 100;
+
     &::before {
       background: $mars-color;
       height: object-size($mars-rad);
@@ -236,6 +244,8 @@ body {
 // Jupiter
 .solar-jupiter {
   .solar-object {
+    width: object-size($jupiter-rad) / 100;
+
     &::before {
       background: $jupiter-color;
       height: object-size($jupiter-rad);
@@ -247,6 +257,8 @@ body {
 // Saturn
 .solar-saturn {
   .solar-object {
+    width: object-size($saturn-rad) / 100;
+
     &::before {
       background: $saturn-color;
       box-shadow: 0 0 0 20rem $dark-color, 0 0 0 40rem rgba($saturn-color, .2), 0 0 0 60rem rgba($saturn-color, .1);
@@ -259,6 +271,8 @@ body {
 // Uranus
 .solar-uranus {
   .solar-object {
+    width: object-size($uranus-rad) / 100;
+
     &::before {
       background: $uranus-color;
       height: object-size($uranus-rad);
@@ -270,6 +284,8 @@ body {
 // Neptune
 .solar-neptune {
   .solar-object {
+    width: object-size($neptune-rad) / 100;
+
     &::before {
       background: $neptune-color;
       height: object-size($neptune-rad);
@@ -293,7 +309,7 @@ body {
   height: 2rem;
   justify-content: center;
   left: 5vw;
-  opacity: .25;
+  opacity: .4;
   position: fixed;
   width: 90vw;
 
@@ -307,9 +323,9 @@ body {
 
     .solar-object {
       height: 1rem;
+      left: 0;
       position: absolute;
-      right: 100%;
-      width: .5rem;
+      transform: translateX(-100%);
 
       &::before {
         border: 10rem solid rgba($dark-color, .15);
