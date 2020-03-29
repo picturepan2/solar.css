@@ -1834,132 +1834,147 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.solar-orbit:hover {
+  border: .05rem solid rgba(190, 190, 190, .15);
+}
+
 .solar-orbit .solar-object {
   border-radius: 50%;
   display: block;
   left: 100%;
   position: absolute;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(.01);
 }
 
 .solar-orbit.solar-sun {
   border: 0;
   height: 0;
   width: 0;
+  z-index: 100;
 }
 
 .solar-orbit.solar-sun .solar-object {
   background: #fa6d00;
-  height: 2.75rem;
-  width: 2.75rem;
+  box-shadow: 0 0 200rem rgba(250, 109, 0, .25);
+  height: 750vh;
+  width: 750vh;
 }
 
 .solar-orbit.solar-mercury {
   animation: orbit 1.20423s linear infinite;
-  height: 5.96549vw;
-  width: 5.96549vw;
+  height: 12.25282vh;
+  width: 12.25282vh;
+  z-index: 90;
 }
 
 .solar-orbit.solar-mercury .solar-object {
   background: #f9af0e;
-  height: .25876rem;
-  width: .25876rem;
+  height: 109.90984vh;
+  width: 109.90984vh;
 }
 
 .solar-orbit.solar-venus {
   animation: orbit 3.075s linear infinite;
-  height: 6.80331vw;
-  width: 6.80331vw;
+  height: 14.20772vh;
+  width: 14.20772vh;
+  z-index: 80;
 }
 
 .solar-orbit.solar-venus .solar-object {
   background: #f1b72c;
-  height: .27174rem;
-  width: .27174rem;
+  height: 124.57964vh;
+  width: 124.57964vh;
 }
 
 .solar-orbit.solar-earth {
   animation: orbit 5s linear infinite;
-  height: 7.49422vw;
-  width: 7.49422vw;
+  height: 15.81985vh;
+  width: 15.81985vh;
+  z-index: 70;
 }
 
 .solar-orbit.solar-earth .solar-object {
   background: #538fc1;
-  height: .27288rem;
-  width: .27288rem;
+  height: 125.87523vh;
+  width: 125.87523vh;
 }
 
 .solar-orbit.solar-mars {
   animation: orbit 9.405s linear infinite;
-  height: 8.80118vw;
-  width: 8.80118vw;
+  height: 18.86943vh;
+  width: 18.86943vh;
+  z-index: 60;
 }
 
 .solar-orbit.solar-mars .solar-object {
   background: #f5805b;
-  height: .26218rem;
-  width: .26218rem;
+  height: 113.76817vh;
+  width: 113.76817vh;
 }
 
 .solar-orbit.solar-jupiter {
   animation: orbit 59.3s linear infinite;
-  height: 17.97728vw;
-  width: 17.97728vw;
+  height: 40.28032vh;
+  width: 40.28032vh;
+  z-index: 50;
 }
 
 .solar-orbit.solar-jupiter .solar-object {
   background: #e96b77;
-  height: .50112rem;
-  width: .50112rem;
+  height: 383.93713vh;
+  width: 383.93713vh;
 }
 
 .solar-orbit.solar-saturn {
   animation: orbit 147.3s linear infinite;
-  height: 28.90016vw;
-  width: 28.90016vw;
+  height: 65.76705vh;
+  width: 65.76705vh;
+  z-index: 40;
 }
 
 .solar-orbit.solar-saturn .solar-object {
   background: #e7a155;
-  box-shadow: 0 0 0 .1rem #181818, 0 0 0 .2rem rgba(231, 161, 85, .2), 0 0 0 .3rem rgba(231, 161, 85, .1);
-  height: .45917rem;
-  width: .45917rem;
+  box-shadow: 0 0 0 20rem #181818, 0 0 0 40rem rgba(231, 161, 85, .2), 0 0 0 60rem rgba(231, 161, 85, .1);
+  height: 336.50394vh;
+  width: 336.50394vh;
 }
 
 .solar-orbit.solar-uranus {
   animation: orbit 420.05s linear infinite;
-  height: 52.89036vw;
-  width: 52.89036vw;
+  height: 121.74418vh;
+  width: 121.74418vh;
+  z-index: 30;
 }
 
 .solar-orbit.solar-uranus .solar-object {
   background: #86e5f8;
-  height: .3411rem;
-  width: .3411rem;
+  height: 203.00544vh;
+  width: 203.00544vh;
 }
 
 .solar-orbit.solar-neptune {
   animation: orbit 824s linear infinite;
-  height: 80vw;
-  width: 80vw;
+  height: 185vh;
+  width: 185vh;
+  z-index: 20;
 }
 
 .solar-orbit.solar-neptune .solar-object {
   background: #95b4fb;
-  height: .33844rem;
-  width: .33844rem;
+  height: 200vh;
+  width: 200vh;
 }
 
 .solar-orbit.solar-venus {
   animation: orbit 3.075s linear infinite;
-  height: 6.80331vw;
-  width: 6.80331vw;
+  height: 14.20772vh;
+  width: 14.20772vh;
+  z-index: 10;
 }
 
 .solar-orbit.solar-venus .solar-object {
   background: #f1b72c;
-  height: .27174rem;
-  width: .27174rem;
+  height: 124.57964vh;
+  width: 124.57964vh;
 }

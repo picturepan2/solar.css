@@ -5,10 +5,10 @@
 @import "spectre";
 
 //- Core variables
-$base-rad: .25rem;
-$max-rad: 2.5rem;
-$base-distance: 5vw;
-$max-distance: 75vw;
+$base-rad: 100vh;
+$max-rad: 100vh;
+$base-distance: 10vh;
+$max-distance: 175vh;
 $base-period: 5s;
 //- Color
 $sun-color: #FA6D00;
@@ -80,13 +80,17 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
 
+  &:hover {
+    border: .05rem solid rgba($gray-color, .15);
+  }
+
   .solar-object {
     border-radius: 50%;
     display: block;
     left: 100%;
     position: absolute;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(.01);
   }
   
   // Sun
@@ -94,11 +98,13 @@ body {
     border: 0;
     height: 0;
     width: 0;
+    z-index: 100;
 
     .solar-object {
       background: $sun-color;
-      height: object-size($sun-rad);
-      width: object-size($sun-rad);
+      box-shadow: 0 0 200rem rgba($sun-color, .25);
+      height: 750vh;
+      width: 750vh;
     }
   }
 
@@ -107,6 +113,7 @@ body {
     animation: orbit ($base-period * $mercury-period) linear infinite;
     height: orbit-size($mercury-distance);
     width: orbit-size($mercury-distance);
+    z-index: 90;
 
     .solar-object {
       background: $mercury-color;
@@ -120,6 +127,7 @@ body {
     animation: orbit ($base-period * $venus-period) linear infinite;
     height: orbit-size($venus-distance);
     width: orbit-size($venus-distance);
+    z-index: 80;
 
     .solar-object {
       background: $venus-color;
@@ -133,6 +141,7 @@ body {
     animation: orbit ($base-period * $earth-period) linear infinite;
     height: orbit-size($earth-distance);
     width: orbit-size($earth-distance);
+    z-index: 70;
 
     .solar-object {
       background: $earth-color;
@@ -146,6 +155,7 @@ body {
     animation: orbit ($base-period * $mars-period) linear infinite;
     height: orbit-size($mars-distance);
     width: orbit-size($mars-distance);
+    z-index: 60;
 
     .solar-object {
       background: $mars-color;
@@ -159,6 +169,7 @@ body {
     animation: orbit ($base-period * $jupiter-period) linear infinite;
     height: orbit-size($jupiter-distance);
     width: orbit-size($jupiter-distance);
+    z-index: 50;
 
     .solar-object {
       background: $jupiter-color;
@@ -172,10 +183,11 @@ body {
     animation: orbit ($base-period * $saturn-period) linear infinite;
     height: orbit-size($saturn-distance);
     width: orbit-size($saturn-distance);
+    z-index: 40;
 
     .solar-object {
       background: $saturn-color;
-      box-shadow: 0 0 0 .1rem $dark-color, 0 0 0 .2rem rgba($saturn-color, .2), 0 0 0 .3rem rgba($saturn-color, .1);
+      box-shadow: 0 0 0 20rem $dark-color, 0 0 0 40rem rgba($saturn-color, .2), 0 0 0 60rem rgba($saturn-color, .1);
       height: object-size($saturn-rad);
       width: object-size($saturn-rad);
     }
@@ -186,6 +198,7 @@ body {
     animation: orbit ($base-period * $uranus-period) linear infinite;
     height: orbit-size($uranus-distance);
     width: orbit-size($uranus-distance);
+    z-index: 30;
 
     .solar-object {
       background: $uranus-color;
@@ -199,6 +212,7 @@ body {
     animation: orbit ($base-period * $neptune-period) linear infinite;
     height: orbit-size($neptune-distance);
     width: orbit-size($neptune-distance);
+    z-index: 20;
 
     .solar-object {
       background: $neptune-color;
@@ -211,6 +225,7 @@ body {
     animation: orbit ($base-period * $venus-period) linear infinite;
     height: orbit-size($venus-distance);
     width: orbit-size($venus-distance);
+    z-index: 10;
 
     .solar-object {
       background: $venus-color;
