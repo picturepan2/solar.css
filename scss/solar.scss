@@ -92,12 +92,16 @@ body {
   }
 
   .solar-object {
-    border-radius: 50%;
-    display: block;
-    left: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%) scale(.01);
+    &::before {
+      border: 10rem solid rgba($dark-color, .15);
+      border-radius: 50%;
+      content: "";
+      display: block;
+      left: 100%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(.01);
+    }
   }
 
   // Sun
@@ -106,13 +110,6 @@ body {
     height: 0;
     width: 0;
     z-index: 100;
-
-    .solar-object {
-      background: $sun-color;
-      box-shadow: 0 0 200rem rgba($sun-color, .25);
-      height: 750vh;
-      width: 750vh;
-    }
   }
 
   // Mercury
@@ -121,12 +118,6 @@ body {
     height: orbit-size($mercury-distance);
     width: orbit-size($mercury-distance);
     z-index: 90;
-
-    .solar-object {
-      background: $mercury-color;
-      height: object-size($mercury-rad);
-      width: object-size($mercury-rad);
-    }
   }
 
   // Venus
@@ -135,12 +126,6 @@ body {
     height: orbit-size($venus-distance);
     width: orbit-size($venus-distance);
     z-index: 80;
-
-    .solar-object {
-      background: $venus-color;
-      height: object-size($venus-rad);
-      width: object-size($venus-rad);
-    }
   }
 
   // Earth
@@ -149,12 +134,6 @@ body {
     height: orbit-size($earth-distance);
     width: orbit-size($earth-distance);
     z-index: 70;
-
-    .solar-object {
-      background: $earth-color;
-      height: object-size($earth-rad);
-      width: object-size($earth-rad);
-    }
   }
 
   // Mars
@@ -163,12 +142,6 @@ body {
     height: orbit-size($mars-distance);
     width: orbit-size($mars-distance);
     z-index: 60;
-
-    .solar-object {
-      background: $mars-color;
-      height: object-size($mars-rad);
-      width: object-size($mars-rad);
-    }
   }
 
   // Jupiter
@@ -177,12 +150,6 @@ body {
     height: orbit-size($jupiter-distance);
     width: orbit-size($jupiter-distance);
     z-index: 50;
-
-    .solar-object {
-      background: $jupiter-color;
-      height: object-size($jupiter-rad);
-      width: object-size($jupiter-rad);
-    }
   }
 
   // Saturn
@@ -191,13 +158,6 @@ body {
     height: orbit-size($saturn-distance);
     width: orbit-size($saturn-distance);
     z-index: 40;
-
-    .solar-object {
-      background: $saturn-color;
-      box-shadow: 0 0 0 20rem $dark-color, 0 0 0 40rem rgba($saturn-color, .2), 0 0 0 60rem rgba($saturn-color, .1);
-      height: object-size($saturn-rad);
-      width: object-size($saturn-rad);
-    }
   }
 
   // Uranus
@@ -206,12 +166,6 @@ body {
     height: orbit-size($uranus-distance);
     width: orbit-size($uranus-distance);
     z-index: 30;
-
-    .solar-object {
-      background: $uranus-color;
-      height: object-size($uranus-rad);
-      width: object-size($uranus-rad);
-    }
   }
 
   // Neptune
@@ -220,8 +174,103 @@ body {
     height: orbit-size($neptune-distance);
     width: orbit-size($neptune-distance);
     z-index: 20;
+  }
+}
 
-    .solar-object {
+// Sun
+.solar-sun {
+  .solar-object {
+    &::before {
+      background: $sun-color;
+      box-shadow: 0 0 200rem rgba($sun-color, .25);
+      height: 750vh;
+      width: 750vh;
+    }
+  }
+}
+
+// Mercury
+.solar-mercury {
+  .solar-object {
+    &::before {
+      background: $mercury-color;
+      height: object-size($mercury-rad);
+      width: object-size($mercury-rad);
+    }
+  }
+}
+
+// Venus
+.solar-venus {
+  .solar-object {
+    &::before {
+      background: $venus-color;
+      height: object-size($venus-rad);
+      width: object-size($venus-rad);
+    }
+  }
+}
+
+// Earth
+.solar-earth {
+  .solar-object {
+    &::before {
+      background: $earth-color;
+      height: object-size($earth-rad);
+      width: object-size($earth-rad);
+    }
+  }
+}
+
+// Mars
+.solar-mars {
+  .solar-object {
+    &::before {
+      background: $mars-color;
+      height: object-size($mars-rad);
+      width: object-size($mars-rad);
+    }
+  }
+}
+
+// Jupiter
+.solar-jupiter {
+  .solar-object {
+    &::before {
+      background: $jupiter-color;
+      height: object-size($jupiter-rad);
+      width: object-size($jupiter-rad);
+    }
+  }
+}
+
+// Saturn
+.solar-saturn {
+  .solar-object {
+    &::before {
+      background: $saturn-color;
+      box-shadow: 0 0 0 20rem $dark-color, 0 0 0 40rem rgba($saturn-color, .2), 0 0 0 60rem rgba($saturn-color, .1);
+      height: object-size($saturn-rad);
+      width: object-size($saturn-rad);
+    }
+  }
+}
+
+// Uranus
+.solar-uranus {
+  .solar-object {
+    &::before {
+      background: $uranus-color;
+      height: object-size($uranus-rad);
+      width: object-size($uranus-rad);
+    }
+  }
+}
+
+// Neptune
+.solar-neptune {
+  .solar-object {
+    &::before {
       background: $neptune-color;
       height: object-size($neptune-rad);
       width: object-size($neptune-rad);
@@ -229,6 +278,7 @@ body {
   }
 }
 
+// Card
 .solar-card {
   display: none;
   position: fixed;
@@ -236,9 +286,49 @@ body {
   top: 2rem;
 }
 
-.solar-labels {
+// Captions
+.solar-captions {
   bottom: 1rem;
+  display: flex;
+  height: 2rem;
+  justify-content: center;
+  left: 5vw;
+  opacity: .25;
   position: fixed;
+  width: 90vw;
+
+  .solar-caption {
+    display: flex;
+    height: 2rem;
+    line-height: 1rem;
+    margin-right: 2rem;
+    padding: .5rem;
+    position: relative;
+
+    .solar-object {
+      height: 1rem;
+      position: absolute;
+      right: 100%;
+      width: .5rem;
+
+      &::before {
+        border: 10rem solid rgba($dark-color, .15);
+        border-radius: 50%;
+        content: "";
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(.01);
+      }
+    }
+
+    .solar-name {
+      font-size: .6rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+  }
 }
 
 // Main
