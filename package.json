@@ -1,0 +1,33 @@
+{
+  "name": "solar.css",
+  "version": "0.1.0",
+  "homepage": "",
+  "author": "Yan Zhu",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/picturepan2/solar.css.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/picturepan2/solar.css/issues"
+  },
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-csscomb": "latest",
+    "gulp-plumber": "latest",
+    "gulp-pug": "latest",
+    "gulp-rename": "latest",
+    "gulp-sass": "latest"
+  },
+  "browserslist": [
+    "last 4 Chrome versions",
+    "Edge >= 12",
+    "Firefox ESR",
+    "last 4 Safari versions",
+    "last 4 Opera versions",
+    "Explorer >= 10"
+  ]
+}

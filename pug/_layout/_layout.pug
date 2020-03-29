@@ -1,0 +1,48 @@
+block global
+  - var domain = ''
+  - var url = domain
+
+block variables
+  - var slug = ''
+  - var parent = ''
+  - var lang = 'en'
+  - var title = ''
+  - var description = ''
+
+if slug == parent
+  if slug == 'index'
+    - var url = domain 
+  else
+    - var url = domain + slug + '.html'
+else 
+  - var url = domain + parent + '/' + slug + '.html'
+
+doctype html
+html(lang= lang)
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(name='robots' content='index, follow')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0, shrink-to-fit=no')
+    meta(http-equiv='x-ua-compatible' content='ie=edge')
+    meta(name='description' content= description)
+    meta(property='og:url' content= url)
+    meta(property='og:title' content= title)
+    meta(property='og:type' content='website')
+    meta(property='og:description' content= description)
+    if slug != parent
+      link(rel='stylesheet' href='../assets/css/solar.min.css')
+    else
+      link(rel='stylesheet' href='assets/css/solar.min.css')
+    link(rel='canonical' href= url)
+    
+
+  body
+    block content
+
+    script(async="" src="https://www.googletagmanager.com/gtag/js?id=UA-2702768-8")
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-2702768-8');
