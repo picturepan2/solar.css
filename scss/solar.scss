@@ -61,6 +61,7 @@ $moon-period: 0.0748;
 body {
   background: $dark-color;
   color: $gray-color;
+  overflow: hidden;
 }
 
 .solar-system {
@@ -589,7 +590,9 @@ body {
 }
 
 .solar-ads {
+  border: .05rem solid rgba($gray-color, .1);
+  bottom: 1rem;
   display: block;
-  height: 25vh;
-  width: 100vw;
+  position: fixed;
+  right: 1rem;
 }
