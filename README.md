@@ -2,7 +2,6 @@
 ## Pure CSS Solar System Animation
 
 ## Data
-
 |Object       |Radius (km) |Sidereal Period (yr) |Distance to the Sun (km) |
 |-------------|------------|---------------------|-------------------------|
 |Sun          |696000      |-                    |-                        |
@@ -17,6 +16,5 @@
 |Moon (Earth) |1737        |0.0748               |-                        |
 
 ## Sources
-
 - [NASA Solar System Exploration](https://solarsystem.nasa.gov/)
 - [Solar System - Wikipedia](https://en.wikipedia.org/wiki/Solar_System)

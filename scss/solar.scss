@@ -5,17 +5,18 @@
 @import "spectre";
 
 //- Core variables
-$base-rad: 100vh;
-$max-rad: 100vh;
-$base-distance: 10vh;
-$max-distance: 175vh;
-$base-period: 10s;
+$base-rad: 50rem;
+$max-rad: 35rem;
+$base-distance: 3.5rem;
+$max-distance: 52.5rem;
+$base-period: 5s;
 //- Color
 $sun-color: #FA6D00;
 $mercury-color: #F9AF0E;
 $venus-color: #F1B72C;
 $earth-color: #538FC1;
 $mars-color: #F5805B;
+$asteroidbelt-color: rgba($gray-color, .05);
 $jupiter-color: #E96B77;
 $saturn-color: #E7A155;
 $uranus-color: #86E5F8;
@@ -27,6 +28,7 @@ $mercury-rad: 2440;
 $venus-rad: 6052;
 $earth-rad: 6371;
 $mars-rad: 3390;
+$asteroidbelt-rad: 149600;
 $jupiter-rad: 69911;
 $saturn-rad: 58232;
 $uranus-rad: 25362;
@@ -38,11 +40,13 @@ $mercury-distance: 57909;
 $venus-distance: 108160;
 $earth-distance: 149600;
 $mars-distance: 227990;
+$asteroidbelt-distance: 493680;
 $jupiter-distance: 778360;
 $saturn-distance: 1433500;
 $uranus-distance: 2872400;
 $neptune-distance: 4498400;
 //- Period
+$sun-period: 0.067;
 $mercury-period: 0.240846;
 $venus-period: 0.615;
 $earth-period: 1;
@@ -143,6 +147,12 @@ body {
     z-index: 60;
   }
 
+  // Asteroid Belt
+  &.solar-asteroidbelt {
+    height: orbit-size($asteroidbelt-distance);
+    width: orbit-size($asteroidbelt-distance);
+  }
+
   // Jupiter
   &.solar-jupiter {
     animation: orbit ($base-period * $jupiter-period) linear infinite;
@@ -178,14 +188,29 @@ body {
   // Moon
   .solar-moon {
     animation: orbit ($base-period * $moon-period) linear infinite;
-    height: .5rem;
+    height: .6rem;
     top: 100%;
-    width: .5rem;
+    width: .6rem;
   }
 }
 
 // Sun
 .solar-sun {
+  &::before {
+    background: currentColor;
+    border-radius: 50%;
+    box-shadow: asteroids(200, $max-rad, 0);
+    color: rgba($gray-color, .5);
+    content: "";
+    display: block;
+    left: 50%;
+    height: .05rem;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: .05rem;
+  }
+
   & > .solar-object {
     &::before {
       background: $sun-color;
@@ -310,6 +335,26 @@ body {
         opacity: 1;
       }
     }
+  }
+}
+
+// Asteroid Belt
+.solar-asteroidbelt {
+  overflow: hidden;
+
+  &::before {
+    background: currentColor;
+    border-radius: 50%;
+    box-shadow: asteroids(100, 60vh, 10vh); // 50vh - 60vh
+    color: rgba($gray-color, .5);
+    content: "";
+    display: block;
+    left: 50%;
+    height: .05rem;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: .05rem;
   }
 }
 
@@ -471,7 +516,7 @@ body {
   height: 2rem;
   justify-content: center;
   left: 5vw;
-  position: fixed;
+  position: absolute;
   width: 90vw;
 
   .solar-caption {
@@ -515,7 +560,7 @@ body {
   display: flex;
   font-weight: 900;
   left: 0;
-  padding: .5rem 1rem;
+  padding: 1rem;
   position: fixed;
   top: 0;
   z-index: 10000;

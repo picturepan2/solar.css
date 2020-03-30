@@ -1864,66 +1864,86 @@ body {
 }
 
 .solar-orbit.solar-mercury {
-  animation: orbit 2.40846s linear infinite;
-  height: 12.25282vh;
-  width: 12.25282vh;
+  animation: orbit 1.2s linear infinite;
+  height: 9.46rem;
+  width: 9.46rem;
   z-index: 90;
 }
 
 .solar-orbit.solar-venus {
-  animation: orbit 6.15s linear infinite;
-  height: 14.20772vh;
-  width: 14.20772vh;
+  animation: orbit 3.08s linear infinite;
+  height: 11.64rem;
+  width: 11.64rem;
   z-index: 80;
 }
 
 .solar-orbit.solar-earth {
-  animation: orbit 10s linear infinite;
-  height: 15.81985vh;
-  width: 15.81985vh;
+  animation: orbit 5s linear infinite;
+  height: 13.07rem;
+  width: 13.07rem;
   z-index: 70;
 }
 
 .solar-orbit.solar-mars {
-  animation: orbit 18.81s linear infinite;
-  height: 18.86943vh;
-  width: 18.86943vh;
+  animation: orbit 9.4s linear infinite;
+  height: 15.32rem;
+  width: 15.32rem;
   z-index: 60;
 }
 
+.solar-orbit.solar-asteroidbelt {
+  height: 20.89rem;
+  width: 20.89rem;
+}
+
 .solar-orbit.solar-jupiter {
-  animation: orbit 118.6s linear infinite;
-  height: 40.28032vh;
-  width: 40.28032vh;
+  animation: orbit 59.3s linear infinite;
+  height: 25.34rem;
+  width: 25.34rem;
   z-index: 50;
 }
 
 .solar-orbit.solar-saturn {
-  animation: orbit 294.6s linear infinite;
-  height: 65.76705vh;
-  width: 65.76705vh;
+  animation: orbit 147.3s linear infinite;
+  height: 33.14rem;
+  width: 33.14rem;
   z-index: 40;
 }
 
 .solar-orbit.solar-uranus {
-  animation: orbit 840.1s linear infinite;
-  height: 121.74418vh;
-  width: 121.74418vh;
+  animation: orbit 420.05s linear infinite;
+  height: 45.45rem;
+  width: 45.45rem;
   z-index: 30;
 }
 
 .solar-orbit.solar-neptune {
-  animation: orbit 1648s linear infinite;
-  height: 185vh;
-  width: 185vh;
+  animation: orbit 824s linear infinite;
+  height: 56rem;
+  width: 56rem;
   z-index: 20;
 }
 
 .solar-orbit .solar-moon {
-  animation: orbit .748s linear infinite;
-  height: .5rem;
+  animation: orbit .37s linear infinite;
+  height: .6rem;
   top: 100%;
-  width: .5rem;
+  width: .6rem;
+}
+
+.solar-sun::before {
+  background: currentColor;
+  border-radius: 50%;
+  box-shadow: -16.5rem -4.5rem, 2.5rem -8.5rem, -.5rem -8.5rem, -13.5rem 7.5rem, -16.5rem 9.5rem, 10.5rem -16.5rem, 4.5rem 11.5rem, 17.5rem -14.5rem, 14.5rem 16.5rem, -15.5rem -13.5rem, 1.5rem -11.5rem, 2.5rem -3.5rem, -4.5rem 1.5rem, 14.5rem 1.5rem, 3.5rem 5.5rem, 15.5rem -1.5rem, -5.5rem 13.5rem, -9.5rem -16.5rem, 7.5rem 14.5rem, 3.5rem 12.5rem, 1.5rem 13.5rem, 3.5rem -14.5rem, .5rem 10.5rem, 3.5rem -15.5rem, -8.5rem -8.5rem, -1.5rem -7.5rem, 15.5rem 3.5rem, 15.5rem 6.5rem, 1.5rem 17.5rem, 6.5rem -8.5rem, 15.5rem 9.5rem, -8.5rem 15.5rem, -1.5rem 1.5rem, -12.5rem -2.5rem, 6.5rem -12.5rem, -9.5rem 12.5rem, 13.5rem 5.5rem, 12.5rem -6.5rem, 16.5rem 5.5rem, -8.5rem 5.5rem, -15.5rem 17.5rem, -7.5rem -16.5rem, 6.5rem 2.5rem, 16.5rem -13.5rem, 13.5rem 8.5rem, -12.5rem 11.5rem, -4.5rem -1.5rem, 8.5rem -14.5rem, -2.5rem -3.5rem, -4.5rem -.5rem, 3.5rem 14.5rem, 17.5rem 3.5rem, 4.5rem 2.5rem, 13.5rem 11.5rem, -.5rem 13.5rem, .5rem 13.5rem, 17.5rem .5rem, 5.5rem 16.5rem, 15.5rem -5.5rem, -15.5rem 2.5rem, -7.5rem 4.5rem, -7.5rem 1.5rem, 13.5rem 7.5rem, 13.5rem 4.5rem, -14.5rem 5.5rem, 9.5rem 11.5rem, 9.5rem 13.5rem, -12.5rem -11.5rem, 8.5rem 4.5rem, -5.5rem 1.5rem, 13.5rem 4.5rem, -10.5rem 14.5rem, 2.5rem 13.5rem, 13.5rem -13.5rem, 6.5rem 5.5rem, -6.5rem 11.5rem, -2.5rem 2.5rem, 4.5rem -7.5rem, -15.5rem 11.5rem, -6.5rem 5.5rem, -.5rem 9.5rem, -4.5rem -12.5rem, 15.5rem -11.5rem, -11.5rem -2.5rem, -10.5rem -13.5rem, -4.5rem 9.5rem, 12.5rem 4.5rem, 13.5rem -2.5rem, -8.5rem 13.5rem, 13.5rem -1.5rem, 8.5rem 5.5rem, 9.5rem 2.5rem, 9.5rem -11.5rem, 16.5rem -9.5rem, 1.5rem 13.5rem, .5rem -14.5rem, -6.5rem 11.5rem, -14.5rem -4.5rem, -5.5rem 6.5rem, 1.5rem 5.5rem, .5rem 15.5rem, -3.5rem 6.5rem, 15.5rem 2.5rem, -13.5rem -13.5rem, 16.5rem 5.5rem, 9.5rem 16.5rem, 1.5rem 9.5rem, 16.5rem -.5rem, 13.5rem 5.5rem, -12.5rem 17.5rem, 16.5rem -1.5rem, -13.5rem 6.5rem, 14.5rem -11.5rem, -15.5rem 4.5rem, -14.5rem 3.5rem, -15.5rem -16.5rem, 6.5rem -15.5rem, -3.5rem 5.5rem, 8.5rem -.5rem, 5.5rem 11.5rem, 17.5rem 8.5rem, 2.5rem -3.5rem, -16.5rem 7.5rem, 8.5rem -16.5rem, -5.5rem -5.5rem, -12.5rem 4.5rem, 1.5rem .5rem, -3.5rem 14.5rem, 14.5rem 17.5rem, -10.5rem 10.5rem, 1.5rem -9.5rem, -1.5rem -16.5rem, -10.5rem 15.5rem, 2.5rem 9.5rem, 1.5rem -.5rem, -5.5rem 1.5rem, -11.5rem -7.5rem, 13.5rem 11.5rem, 14.5rem 10.5rem, -3.5rem -12.5rem, -2.5rem -2.5rem, 8.5rem -.5rem, -14.5rem -12.5rem, 16.5rem 1.5rem, 14.5rem -8.5rem, 17.5rem -6.5rem, -1.5rem 17.5rem, -4.5rem 8.5rem, -14.5rem 11.5rem, -15.5rem 3.5rem, 6.5rem 16.5rem, -16.5rem 14.5rem, -10.5rem -8.5rem, -3.5rem 12.5rem, -.5rem -16.5rem, -9.5rem 1.5rem, -5.5rem 3.5rem, -6.5rem -1.5rem, -10.5rem 12.5rem, 7.5rem 4.5rem, -4.5rem -16.5rem, -11.5rem .5rem, 11.5rem -1.5rem, .5rem 12.5rem, 7.5rem 3.5rem, 1.5rem 8.5rem, -9.5rem 10.5rem, 10.5rem 9.5rem, 1.5rem -16.5rem, -9.5rem 7.5rem, -1.5rem -1.5rem, -5.5rem -12.5rem, -2.5rem -15.5rem, 11.5rem 4.5rem, 9.5rem 2.5rem, .5rem 8.5rem, -15.5rem -3.5rem, -3.5rem -9.5rem, -4.5rem 13.5rem, 17.5rem -12.5rem, -13.5rem 7.5rem, 15.5rem 15.5rem, 7.5rem 14.5rem, -16.5rem 16.5rem, -12.5rem 2.5rem, 10.5rem 16.5rem, -16.5rem 8.5rem, .5rem -16.5rem, 10.5rem -1.5rem, 3.5rem 9.5rem, -3.5rem 12.5rem, 13.5rem -13.5rem, -16.5rem 3.5rem, 13.5rem 6.5rem, 4.5rem 6.5rem, -4.5rem 6.5rem, 10.5rem -16.5rem, -.5rem -14.5rem, 5.5rem -7.5rem, .5rem -.5rem;
+  color: rgba(190, 190, 190, .5);
+  content: "";
+  display: block;
+  height: .05rem;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: .05rem;
 }
 
 .solar-sun > .solar-object::before {
@@ -1942,13 +1962,13 @@ body {
 }
 
 .solar-mercury > .solar-object {
-  width: 1.0991vh;
+  width: .53rem;
 }
 
 .solar-mercury > .solar-object::before {
   background: #f9af0e;
-  height: 109.90984vh;
-  width: 109.90984vh;
+  height: 53.47rem;
+  width: 53.47rem;
 }
 
 .solar-mercury:hover ~ .solar-cards .solar-mercury {
@@ -1960,13 +1980,13 @@ body {
 }
 
 .solar-venus > .solar-object {
-  width: 1.2458vh;
+  width: .59rem;
 }
 
 .solar-venus > .solar-object::before {
   background: #f1b72c;
-  height: 124.57964vh;
-  width: 124.57964vh;
+  height: 58.6rem;
+  width: 58.6rem;
 }
 
 .solar-venus:hover ~ .solar-cards .solar-venus {
@@ -1978,13 +1998,13 @@ body {
 }
 
 .solar-earth > .solar-object {
-  width: 1.25875vh;
+  width: .59rem;
 }
 
 .solar-earth > .solar-object::before {
   background: #538fc1;
-  height: 125.87523vh;
-  width: 125.87523vh;
+  height: 59.06rem;
+  width: 59.06rem;
 }
 
 .solar-earth:hover ~ .solar-cards .solar-earth {
@@ -1996,13 +2016,13 @@ body {
 }
 
 .solar-mars > .solar-object {
-  width: 1.13768vh;
+  width: .55rem;
 }
 
 .solar-mars > .solar-object::before {
   background: #f5805b;
-  height: 113.76817vh;
-  width: 113.76817vh;
+  height: 54.82rem;
+  width: 54.82rem;
 }
 
 .solar-mars:hover ~ .solar-cards .solar-mars {
@@ -2013,14 +2033,33 @@ body {
   opacity: 1;
 }
 
+.solar-asteroidbelt {
+  overflow: hidden;
+}
+
+.solar-asteroidbelt::before {
+  background: currentColor;
+  border-radius: 50%;
+  box-shadow: 6vh 4vh, -6vh -12vh, 11vh -23vh, 24vh 9vh, -13vh 10vh, -8vh 2vh, 9vh 28vh, 19vh 15vh, -9vh -11vh, -27vh 6vh, -23vh 21vh, 24vh -4vh, -3vh 3vh, 6vh -29vh, 15vh 7vh, 30vh 14vh, 8vh 15vh, -26vh -10vh, 5vh 22vh, 22vh -14vh, -19vh 13vh, -19vh 6vh, 21vh 21vh, -18vh -9vh, -23vh 4vh, 8vh 6vh, 30vh 29vh, -7vh 16vh, 16vh 12vh, -3vh -2vh, 11vh 5vh, -9vh 28vh, -6vh -2vh, -29vh 6vh, -9vh -13vh, 7vh 21vh, -9vh 23vh, -9vh 10vh, -18vh -4vh, -15vh 22vh, 21vh -4vh, -10vh 10vh, 16vh -16vh, -25vh -20vh, -22vh 14vh, -25vh -3vh, -24vh -25vh, 5vh -4vh, 17vh 0vh, 12vh -5vh, -24vh -2vh, 11vh 2vh, -4vh 18vh, -29vh -8vh, -10vh 11vh, 7vh -21vh, 10vh 3vh, -26vh 4vh, -14vh 5vh, 1vh -17vh, 8vh -29vh, -25vh -3vh, 8vh 0vh, 5vh 26vh, 1vh -27vh, 6vh 14vh, -8vh -29vh, 27vh 5vh, 1vh 30vh, -7vh -24vh, 24vh -8vh, 29vh -6vh, 3vh 27vh, 15vh -23vh, 18vh 1vh, -12vh 18vh, 17vh -29vh, -21vh -24vh, -25vh -17vh, 4vh 0vh, 16vh -21vh, -14vh -19vh, 25vh -8vh, -2vh -9vh, -7vh 26vh, 1vh 7vh, -1vh 0vh, 16vh -12vh, 7vh 21vh, 4vh 18vh, -19vh -4vh, -1vh 24vh, 20vh 18vh, 30vh -14vh, 5vh 6vh, -6vh 28vh, -21vh 2vh, 23vh 27vh, 13vh 12vh, 28vh 2vh;
+  color: rgba(190, 190, 190, .5);
+  content: "";
+  display: block;
+  height: .05rem;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: .05rem;
+}
+
 .solar-jupiter > .solar-object {
-  width: 3.83937vh;
+  width: 1.49rem;
 }
 
 .solar-jupiter > .solar-object::before {
   background: #e96b77;
-  height: 383.93713vh;
-  width: 383.93713vh;
+  height: 149.38rem;
+  width: 149.38rem;
 }
 
 .solar-jupiter:hover ~ .solar-cards .solar-jupiter {
@@ -2032,14 +2071,14 @@ body {
 }
 
 .solar-saturn > .solar-object {
-  width: 3.36504vh;
+  width: 1.33rem;
 }
 
 .solar-saturn > .solar-object::before {
   background: #e7a155;
   box-shadow: 0 0 0 20rem #181818, 0 0 0 40rem rgba(231, 161, 85, .2), 0 0 0 60rem rgba(231, 161, 85, .1);
-  height: 336.50394vh;
-  width: 336.50394vh;
+  height: 132.78rem;
+  width: 132.78rem;
 }
 
 .solar-saturn:hover ~ .solar-cards .solar-saturn {
@@ -2051,13 +2090,13 @@ body {
 }
 
 .solar-uranus > .solar-object {
-  width: 2.03005vh;
+  width: .86rem;
 }
 
 .solar-uranus > .solar-object::before {
   background: #86e5f8;
-  height: 203.00544vh;
-  width: 203.00544vh;
+  height: 86.05rem;
+  width: 86.05rem;
 }
 
 .solar-uranus:hover ~ .solar-cards .solar-uranus {
@@ -2069,13 +2108,13 @@ body {
 }
 
 .solar-neptune > .solar-object {
-  width: 2vh;
+  width: .85rem;
 }
 
 .solar-neptune > .solar-object::before {
   background: #95b4fb;
-  height: 200vh;
-  width: 200vh;
+  height: 85rem;
+  width: 85rem;
 }
 
 .solar-neptune:hover ~ .solar-cards .solar-neptune {
@@ -2132,7 +2171,7 @@ body {
   height: 2rem;
   justify-content: center;
   left: 5vw;
-  position: fixed;
+  position: absolute;
   width: 90vw;
 }
 
@@ -2178,7 +2217,7 @@ body {
   -ms-flex-align: center;
   font-weight: 900;
   left: 0;
-  padding: .5rem 1rem;
+  padding: 1rem;
   position: fixed;
   top: 0;
   z-index: 10000;
