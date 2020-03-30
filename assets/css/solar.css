@@ -1926,15 +1926,15 @@ body {
 
 .solar-orbit .solar-moon {
   animation: orbit .37s linear infinite;
-  height: .6rem;
+  height: .8rem;
   top: 100%;
-  width: .6rem;
+  width: .8rem;
 }
 
 .solar-sun::before {
   background: currentColor;
   border-radius: 50%;
-  box-shadow: -16.5rem -4.5rem, 2.5rem -8.5rem, -.5rem -8.5rem, -13.5rem 7.5rem, -16.5rem 9.5rem, 10.5rem -16.5rem, 4.5rem 11.5rem, 17.5rem -14.5rem, 14.5rem 16.5rem, -15.5rem -13.5rem, 1.5rem -11.5rem, 2.5rem -3.5rem, -4.5rem 1.5rem, 14.5rem 1.5rem, 3.5rem 5.5rem, 15.5rem -1.5rem, -5.5rem 13.5rem, -9.5rem -16.5rem, 7.5rem 14.5rem, 3.5rem 12.5rem, 1.5rem 13.5rem, 3.5rem -14.5rem, .5rem 10.5rem, 3.5rem -15.5rem, -8.5rem -8.5rem, -1.5rem -7.5rem, 15.5rem 3.5rem, 15.5rem 6.5rem, 1.5rem 17.5rem, 6.5rem -8.5rem, 15.5rem 9.5rem, -8.5rem 15.5rem, -1.5rem 1.5rem, -12.5rem -2.5rem, 6.5rem -12.5rem, -9.5rem 12.5rem, 13.5rem 5.5rem, 12.5rem -6.5rem, 16.5rem 5.5rem, -8.5rem 5.5rem, -15.5rem 17.5rem, -7.5rem -16.5rem, 6.5rem 2.5rem, 16.5rem -13.5rem, 13.5rem 8.5rem, -12.5rem 11.5rem, -4.5rem -1.5rem, 8.5rem -14.5rem, -2.5rem -3.5rem, -4.5rem -.5rem, 3.5rem 14.5rem, 17.5rem 3.5rem, 4.5rem 2.5rem, 13.5rem 11.5rem, -.5rem 13.5rem, .5rem 13.5rem, 17.5rem .5rem, 5.5rem 16.5rem, 15.5rem -5.5rem, -15.5rem 2.5rem, -7.5rem 4.5rem, -7.5rem 1.5rem, 13.5rem 7.5rem, 13.5rem 4.5rem, -14.5rem 5.5rem, 9.5rem 11.5rem, 9.5rem 13.5rem, -12.5rem -11.5rem, 8.5rem 4.5rem, -5.5rem 1.5rem, 13.5rem 4.5rem, -10.5rem 14.5rem, 2.5rem 13.5rem, 13.5rem -13.5rem, 6.5rem 5.5rem, -6.5rem 11.5rem, -2.5rem 2.5rem, 4.5rem -7.5rem, -15.5rem 11.5rem, -6.5rem 5.5rem, -.5rem 9.5rem, -4.5rem -12.5rem, 15.5rem -11.5rem, -11.5rem -2.5rem, -10.5rem -13.5rem, -4.5rem 9.5rem, 12.5rem 4.5rem, 13.5rem -2.5rem, -8.5rem 13.5rem, 13.5rem -1.5rem, 8.5rem 5.5rem, 9.5rem 2.5rem, 9.5rem -11.5rem, 16.5rem -9.5rem, 1.5rem 13.5rem, .5rem -14.5rem, -6.5rem 11.5rem, -14.5rem -4.5rem, -5.5rem 6.5rem, 1.5rem 5.5rem, .5rem 15.5rem, -3.5rem 6.5rem, 15.5rem 2.5rem, -13.5rem -13.5rem, 16.5rem 5.5rem, 9.5rem 16.5rem, 1.5rem 9.5rem, 16.5rem -.5rem, 13.5rem 5.5rem, -12.5rem 17.5rem, 16.5rem -1.5rem, -13.5rem 6.5rem, 14.5rem -11.5rem, -15.5rem 4.5rem, -14.5rem 3.5rem, -15.5rem -16.5rem, 6.5rem -15.5rem, -3.5rem 5.5rem, 8.5rem -.5rem, 5.5rem 11.5rem, 17.5rem 8.5rem, 2.5rem -3.5rem, -16.5rem 7.5rem, 8.5rem -16.5rem, -5.5rem -5.5rem, -12.5rem 4.5rem, 1.5rem .5rem, -3.5rem 14.5rem, 14.5rem 17.5rem, -10.5rem 10.5rem, 1.5rem -9.5rem, -1.5rem -16.5rem, -10.5rem 15.5rem, 2.5rem 9.5rem, 1.5rem -.5rem, -5.5rem 1.5rem, -11.5rem -7.5rem, 13.5rem 11.5rem, 14.5rem 10.5rem, -3.5rem -12.5rem, -2.5rem -2.5rem, 8.5rem -.5rem, -14.5rem -12.5rem, 16.5rem 1.5rem, 14.5rem -8.5rem, 17.5rem -6.5rem, -1.5rem 17.5rem, -4.5rem 8.5rem, -14.5rem 11.5rem, -15.5rem 3.5rem, 6.5rem 16.5rem, -16.5rem 14.5rem, -10.5rem -8.5rem, -3.5rem 12.5rem, -.5rem -16.5rem, -9.5rem 1.5rem, -5.5rem 3.5rem, -6.5rem -1.5rem, -10.5rem 12.5rem, 7.5rem 4.5rem, -4.5rem -16.5rem, -11.5rem .5rem, 11.5rem -1.5rem, .5rem 12.5rem, 7.5rem 3.5rem, 1.5rem 8.5rem, -9.5rem 10.5rem, 10.5rem 9.5rem, 1.5rem -16.5rem, -9.5rem 7.5rem, -1.5rem -1.5rem, -5.5rem -12.5rem, -2.5rem -15.5rem, 11.5rem 4.5rem, 9.5rem 2.5rem, .5rem 8.5rem, -15.5rem -3.5rem, -3.5rem -9.5rem, -4.5rem 13.5rem, 17.5rem -12.5rem, -13.5rem 7.5rem, 15.5rem 15.5rem, 7.5rem 14.5rem, -16.5rem 16.5rem, -12.5rem 2.5rem, 10.5rem 16.5rem, -16.5rem 8.5rem, .5rem -16.5rem, 10.5rem -1.5rem, 3.5rem 9.5rem, -3.5rem 12.5rem, 13.5rem -13.5rem, -16.5rem 3.5rem, 13.5rem 6.5rem, 4.5rem 6.5rem, -4.5rem 6.5rem, 10.5rem -16.5rem, -.5rem -14.5rem, 5.5rem -7.5rem, .5rem -.5rem;
+  box-shadow: 10.5rem -12.5rem, 3.5rem 13.5rem, -13.5rem -3.5rem, 11.5rem -13.5rem, 7.5rem -9.5rem, -7.5rem -10.5rem, 14.5rem 10.5rem, 10.5rem 9.5rem, 14.5rem 8.5rem, -15.5rem -13.5rem, 7.5rem 4.5rem, 6.5rem -13.5rem, 17.5rem -16.5rem, 13.5rem -7.5rem, 6.5rem -14.5rem, 5.5rem -4.5rem, -8.5rem -7.5rem, -15.5rem -6.5rem, 17.5rem 2.5rem, 5.5rem -6.5rem, -14.5rem 1.5rem, 7.5rem 5.5rem, 15.5rem -2.5rem, -7.5rem 14.5rem, -12.5rem 9.5rem, -13.5rem -.5rem, -2.5rem -16.5rem, -9.5rem 3.5rem, 2.5rem -.5rem, -6.5rem 6.5rem, 11.5rem -9.5rem, 15.5rem -.5rem, -11.5rem 5.5rem, 13.5rem -9.5rem, -13.5rem 10.5rem, 12.5rem 8.5rem, -8.5rem -7.5rem, -16.5rem -6.5rem, 15.5rem -6.5rem, 4.5rem -5.5rem, -11.5rem -13.5rem, 9.5rem -8.5rem, 13.5rem -5.5rem, 3.5rem -5.5rem, 4.5rem -10.5rem, .5rem 2.5rem, -11.5rem 12.5rem, -3.5rem -8.5rem, 2.5rem 3.5rem, -11.5rem -16.5rem, 14.5rem -12.5rem, 14.5rem -10.5rem, -9.5rem -16.5rem, -12.5rem 11.5rem, -11.5rem 15.5rem, -7.5rem 17.5rem, 14.5rem 9.5rem, -6.5rem -.5rem, -9.5rem 8.5rem, 6.5rem -1.5rem, 3.5rem 1.5rem, 15.5rem 8.5rem, 1.5rem -5.5rem, -3.5rem 1.5rem, -6.5rem .5rem, 5.5rem 11.5rem, 3.5rem 4.5rem, .5rem -15.5rem, 3.5rem -15.5rem, -9.5rem -2.5rem, 15.5rem 12.5rem, 16.5rem 10.5rem, -2.5rem -2.5rem, 11.5rem 10.5rem, .5rem -5.5rem, -11.5rem -14.5rem, 2.5rem 14.5rem, 13.5rem 1.5rem, 4.5rem -6.5rem, -11.5rem -16.5rem, -11.5rem -6.5rem, -4.5rem 9.5rem, -.5rem -1.5rem, 13.5rem 6.5rem, -8.5rem -3.5rem, 11.5rem 1.5rem, 1.5rem -4.5rem, 5.5rem 16.5rem, -.5rem -5.5rem, -5.5rem -10.5rem, -11.5rem 11.5rem, -6.5rem -16.5rem, 4.5rem -13.5rem, 13.5rem -9.5rem, -15.5rem -12.5rem, -5.5rem 17.5rem, 17.5rem 15.5rem, 15.5rem 4.5rem, 1.5rem 17.5rem, -16.5rem -5.5rem, 1.5rem 16.5rem, 11.5rem 7.5rem, 7.5rem 10.5rem, 6.5rem -8.5rem, -2.5rem 1.5rem, 8.5rem -15.5rem, -3.5rem 14.5rem, -4.5rem 8.5rem, -2.5rem 2.5rem, 10.5rem 8.5rem, -12.5rem 15.5rem, -4.5rem 10.5rem, 9.5rem -1.5rem, -5.5rem -12.5rem, -12.5rem .5rem, 15.5rem -15.5rem, -12.5rem 14.5rem, 6.5rem 7.5rem, -12.5rem -12.5rem, -15.5rem 6.5rem, 13.5rem 13.5rem, 1.5rem 15.5rem, 4.5rem 8.5rem, 12.5rem -11.5rem, 11.5rem -7.5rem, -7.5rem -15.5rem, -12.5rem 11.5rem, 14.5rem -9.5rem, 1.5rem 12.5rem, 5.5rem 5.5rem, -2.5rem 1.5rem, 4.5rem -11.5rem, -5.5rem 6.5rem, 5.5rem -8.5rem, 13.5rem 1.5rem, 16.5rem 14.5rem, 1.5rem 14.5rem, -10.5rem -11.5rem, -.5rem 6.5rem, 4.5rem -7.5rem, 11.5rem -8.5rem, -6.5rem -12.5rem, .5rem -2.5rem, 11.5rem 9.5rem, -5.5rem 14.5rem, 16.5rem -10.5rem, 11.5rem -13.5rem, -15.5rem -4.5rem, .5rem 13.5rem, -15.5rem 11.5rem, .5rem 17.5rem, 11.5rem -14.5rem, 10.5rem 15.5rem, 4.5rem -12.5rem, -.5rem -9.5rem, -3.5rem 11.5rem, .5rem -4.5rem, 3.5rem 1.5rem, -7.5rem 9.5rem, 5.5rem 2.5rem, -4.5rem 16.5rem, 3.5rem -12.5rem, 2.5rem 1.5rem, 12.5rem 6.5rem, 11.5rem 15.5rem, -6.5rem 2.5rem, 12.5rem 14.5rem, 3.5rem -.5rem, -4.5rem -3.5rem, -16.5rem 11.5rem, .5rem 9.5rem, -12.5rem -8.5rem, -12.5rem -.5rem, 12.5rem 16.5rem, 16.5rem -12.5rem, 16.5rem -13.5rem, 8.5rem -15.5rem, 17.5rem -10.5rem, -10.5rem 13.5rem, -16.5rem -.5rem, 12.5rem 9.5rem, -15.5rem 4.5rem, -4.5rem 15.5rem, -12.5rem .5rem, 2.5rem 11.5rem, -11.5rem 1.5rem, 4.5rem 10.5rem, 5.5rem 14.5rem, -5.5rem -1.5rem, 7.5rem 12.5rem, -11.5rem 7.5rem, 13.5rem 15.5rem, 3.5rem 13.5rem, -14.5rem 17.5rem, 7.5rem 17.5rem, -2.5rem 2.5rem, 15.5rem -1.5rem, 3.5rem -4.5rem, 11.5rem -.5rem, -14.5rem 14.5rem;
   color: rgba(190, 190, 190, .5);
   content: "";
   display: block;
@@ -2040,7 +2040,7 @@ body {
 .solar-asteroidbelt::before {
   background: currentColor;
   border-radius: 50%;
-  box-shadow: 6vh 4vh, -6vh -12vh, 11vh -23vh, 24vh 9vh, -13vh 10vh, -8vh 2vh, 9vh 28vh, 19vh 15vh, -9vh -11vh, -27vh 6vh, -23vh 21vh, 24vh -4vh, -3vh 3vh, 6vh -29vh, 15vh 7vh, 30vh 14vh, 8vh 15vh, -26vh -10vh, 5vh 22vh, 22vh -14vh, -19vh 13vh, -19vh 6vh, 21vh 21vh, -18vh -9vh, -23vh 4vh, 8vh 6vh, 30vh 29vh, -7vh 16vh, 16vh 12vh, -3vh -2vh, 11vh 5vh, -9vh 28vh, -6vh -2vh, -29vh 6vh, -9vh -13vh, 7vh 21vh, -9vh 23vh, -9vh 10vh, -18vh -4vh, -15vh 22vh, 21vh -4vh, -10vh 10vh, 16vh -16vh, -25vh -20vh, -22vh 14vh, -25vh -3vh, -24vh -25vh, 5vh -4vh, 17vh 0vh, 12vh -5vh, -24vh -2vh, 11vh 2vh, -4vh 18vh, -29vh -8vh, -10vh 11vh, 7vh -21vh, 10vh 3vh, -26vh 4vh, -14vh 5vh, 1vh -17vh, 8vh -29vh, -25vh -3vh, 8vh 0vh, 5vh 26vh, 1vh -27vh, 6vh 14vh, -8vh -29vh, 27vh 5vh, 1vh 30vh, -7vh -24vh, 24vh -8vh, 29vh -6vh, 3vh 27vh, 15vh -23vh, 18vh 1vh, -12vh 18vh, 17vh -29vh, -21vh -24vh, -25vh -17vh, 4vh 0vh, 16vh -21vh, -14vh -19vh, 25vh -8vh, -2vh -9vh, -7vh 26vh, 1vh 7vh, -1vh 0vh, 16vh -12vh, 7vh 21vh, 4vh 18vh, -19vh -4vh, -1vh 24vh, 20vh 18vh, 30vh -14vh, 5vh 6vh, -6vh 28vh, -21vh 2vh, 23vh 27vh, 13vh 12vh, 28vh 2vh;
+  box-shadow: -10vh -4vh, -3vh -6vh, -9vh -1vh, 22vh 22vh, -2vh -15vh, 7vh 4vh, 8vh 2vh, 8vh -4vh, -4vh 10vh, -5vh -18vh, -26vh -27vh, -18vh 25vh, -3vh 22vh, -24vh -22vh, 13vh -22vh, 3vh 3vh, -16vh -18vh, 23vh -19vh, -14vh -29vh, -8vh 9vh, -18vh -4vh, 30vh -10vh, -15vh 16vh, -6vh 0vh, 14vh 15vh, -23vh 12vh, -11vh 12vh, -7vh -11vh, -10vh -24vh, 21vh -21vh, 24vh -22vh, -3vh -9vh, -9vh -23vh, 3vh 16vh, -2vh -2vh, -2vh 25vh, -14vh 14vh, -10vh -20vh, 28vh 20vh, -8vh 21vh, 18vh 28vh, -13vh 17vh, 1vh 20vh, -17vh -15vh, -28vh 16vh, 6vh -4vh, -9vh -27vh, 7vh 12vh, -24vh 3vh, 7vh -25vh, 20vh 10vh, -14vh 6vh, -27vh 17vh, -25vh -18vh, 15vh -6vh, 15vh 8vh, 12vh -29vh, -20vh 21vh, 17vh -8vh, -6vh -29vh, -16vh 26vh, 8vh 20vh, 20vh -15vh, -24vh 7vh, -5vh 10vh, 8vh 3vh, -1vh -15vh, 17vh 22vh, -21vh -7vh, -26vh 4vh, 12vh 28vh, 13vh 9vh, -8vh 15vh, 30vh 23vh, -24vh -1vh, 24vh -7vh, 1vh 29vh, -19vh 20vh, -4vh -1vh, -21vh -21vh, -13vh 13vh, 24vh 20vh, -8vh 9vh, 12vh -18vh, -19vh -29vh, 29vh 16vh, 13vh -19vh, -8vh 3vh, 30vh 19vh, 15vh -2vh, 2vh -27vh, 13vh 4vh, 10vh -10vh, 15vh -7vh, -12vh -21vh, -18vh -25vh, 10vh -17vh, -4vh 19vh, -8vh 20vh, -26vh 4vh;
   color: rgba(190, 190, 190, .5);
   content: "";
   display: block;
@@ -2171,7 +2171,7 @@ body {
   height: 2rem;
   justify-content: center;
   left: 5vw;
-  position: absolute;
+  position: fixed;
   width: 90vw;
 }
 
@@ -2180,7 +2180,6 @@ body {
   display: flex;
   height: 2rem;
   line-height: 1rem;
-  margin-right: 2rem;
   opacity: .4;
   padding: .5rem;
   position: relative;
@@ -2188,9 +2187,8 @@ body {
 
 .solar-captions .solar-caption .solar-object {
   height: 1rem;
-  left: 0;
-  position: absolute;
-  transform: translateX(-100%);
+  margin-right: .5rem;
+  position: relative;
 }
 
 .solar-captions .solar-caption .solar-object::before {

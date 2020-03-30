@@ -188,9 +188,9 @@ body {
   // Moon
   .solar-moon {
     animation: orbit ($base-period * $moon-period) linear infinite;
-    height: .6rem;
+    height: .8rem;
     top: 100%;
-    width: .6rem;
+    width: .8rem;
   }
 }
 
@@ -516,23 +516,21 @@ body {
   height: 2rem;
   justify-content: center;
   left: 5vw;
-  position: absolute;
+  position: fixed;
   width: 90vw;
 
   .solar-caption {
     display: flex;
     height: 2rem;
     line-height: 1rem;
-    margin-right: 2rem;
     opacity: .4;
     padding: .5rem;
     position: relative;
 
     .solar-object {
       height: 1rem;
-      left: 0;
-      position: absolute;
-      transform: translateX(-100%);
+      margin-right: .5rem;
+      position: relative;
 
       &::before {
         border: 10rem solid rgba($dark-color, .15);
