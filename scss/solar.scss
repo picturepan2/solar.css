@@ -64,6 +64,17 @@ body {
   overflow: hidden;
 }
 
+.solar-container {
+  bottom: 1rem;
+  display: flex;
+  height: 2rem;
+  justify-content: center;
+  left: 5vw;
+  position: fixed;
+  width: 90vw;
+  z-index: 9999;
+}
+
 .solar-system {
   height: 100vh;
   left: 0;
@@ -74,20 +85,12 @@ body {
 
   &.solar-3d {
     perspective: 500rem;
-    transform: perspective(500rem) rotateX(60deg);
+    transform: perspective(500rem) rotateX(65deg);
     transform-style: preserve-3d;
 
     .solar-orbit {
-      .solar-object > div {
-        perspective: 500rem;
-        transform: rotateZ(-60deg);
-        transform-style: preserve-3d;
-      }
-    }
-  
-    .solar-captions {
       perspective: 500rem;
-      transform: rotateX(-60deg) translateY(7.5rem);
+      transform: rotateZ(-65deg);
       transform-style: preserve-3d;
     }
   }
@@ -474,51 +477,7 @@ body {
   }
 }
 
-// Card
-.solar-card {
-  background: $dark-color;
-  border: .1rem solid rgba($gray-color, .1);
-  border-radius: $border-radius;
-  display: none;
-  padding: .5rem;
-  position: fixed;
-  right: 1rem;
-  top: 1rem;
-  width: 12rem;
-  z-index: 99999;
-
-  .solar-name {
-    font-size: .8rem;
-    font-weight: 900;
-    text-transform: uppercase;
-  }
-
-  .card-subtitle {
-    font-size: .6rem;
-    font-weight: 400;
-    opacity: .75;
-    text-transform: uppercase;
-  }
-
-  .card-head {
-    font-size: .6rem;
-    margin-top: .5rem;
-    opacity: .5;
-  }
-}
-
-// Container
-.solar-container {
-  bottom: 1rem;
-  display: flex;
-  height: 2rem;
-  justify-content: center;
-  left: 5vw;
-  position: fixed;
-  width: 90vw;
-  z-index: 9999;
-}
-
+// Caption
 .solar-caption {
   display: flex;
   height: 2rem;
@@ -564,6 +523,39 @@ body {
     font-size: .6rem;
     font-weight: 900;
     text-transform: uppercase;
+  }
+
+  .solar-card {
+    background: $dark-color;
+    border: .1rem solid rgba($gray-color, .1);
+    border-radius: $border-radius;
+    display: none;
+    padding: .5rem;
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    width: 12rem;
+    z-index: 99999;
+  
+    .solar-name {
+      font-size: 1.2rem;
+      font-weight: 900;
+      line-height: 1.5;
+      text-transform: uppercase;
+    }
+  
+    .card-subtitle {
+      font-size: .6rem;
+      font-weight: 400;
+      opacity: .75;
+      text-transform: uppercase;
+    }
+  
+    .card-head {
+      font-size: .6rem;
+      margin-top: .5rem;
+      opacity: .5;
+    }
   }
 }
 
