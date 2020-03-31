@@ -5,7 +5,7 @@
 }
 
 @function object-size($base) {
-  $result: ($base / $neptune-rad) * $max-rad + $base-rad;
+  $result: ($base / $jupiter-rad) * $max-rad + $base-rad;
   @return $result;
 }
 

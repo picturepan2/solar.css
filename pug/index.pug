@@ -11,63 +11,11 @@ block content
   .solar-system-header
     a.solar-brand(href= url, target="_blank") SOLAR.CSS
     a.solar-github(href="https://github.com/picturepan2/solar.css", target="_blank") GITHUB
-  .solar-system
-    .solar-orbit.solar-sun
+  //- Cards
+  .solar-container
+    .solar-caption.solar-mercury
       .solar-object
-    .solar-orbit.solar-mercury
-      .solar-object
-    .solar-orbit.solar-venus
-      .solar-object
-    .solar-orbit.solar-earth
-      .solar-object
-        .solar-moon
-          .solar-object
-    .solar-orbit.solar-mars
-      .solar-object
-    .solar-orbit.solar-asteroidbelt
-    .solar-orbit.solar-jupiter
-      .solar-object
-    .solar-orbit.solar-saturn
-      .solar-object
-    .solar-orbit.solar-uranus
-      .solar-object
-    .solar-orbit.solar-neptune
-      .solar-object
-    //- Captions
-    .solar-captions
-      .solar-caption.solar-mercury
-        .solar-object
-        .solar-name Mercury
-      .solar-caption.solar-venus
-        .solar-object
-        .solar-name Venus
-      .solar-caption.solar-earth
-        .solar-object
-        .solar-name Earth
-      .solar-caption.solar-mars
-        .solar-object
-        .solar-name Mars
-      .solar-caption.solar-jupiter
-        .solar-object
-        .solar-name Jupiter
-      .solar-caption.solar-saturn
-        .solar-object
-        .solar-name Saturn
-      .solar-caption.solar-uranus
-        .solar-object
-        .solar-name Uranus
-      .solar-caption.solar-neptune
-        .solar-object
-        .solar-name Neptune
-    //- Cards
-    .solar-cards
-      .solar-card.solar-sun
-        .solar-name Sun
-        .card-subtitle Our Star
-        .card-head Star type
-        .card-body Yellow Dwarf
-        .card-head Age
-        .card-body ~4.5 billion years
+      .solar-name Mercury
       .solar-card.solar-mercury
         .solar-name Mercury
         .card-subtitle The Swiftest Planet
@@ -77,6 +25,9 @@ block content
         .card-body 4 879.4 km
         .card-head Length of year
         .card-body 88 Earth days
+    .solar-caption.solar-venus
+      .solar-object
+      .solar-name Venus
       .solar-card.solar-venus
         .solar-name Venus
         .card-subtitle Planetary Hot Spot
@@ -86,6 +37,9 @@ block content
         .card-body 12 103.6 km
         .card-head Length of year
         .card-body 225 Earth days
+    .solar-caption.solar-earth
+      .solar-object
+      .solar-name Earth
       .solar-card.solar-earth
         .solar-name Earth
         .card-subtitle Our Home Planet
@@ -95,6 +49,9 @@ block content
         .card-body 12 756.3 km
         .card-head Length of year
         .card-body 365 Earth days
+    .solar-caption.solar-mars
+      .solar-object
+      .solar-name Mars
       .solar-card.solar-mars
         .solar-name Mars
         .card-subtitle The Red Planet
@@ -104,6 +61,9 @@ block content
         .card-body 6 792.4 km
         .card-head Length of year
         .card-body 687 Earth days
+    .solar-caption.solar-jupiter
+      .solar-object
+      .solar-name Jupiter
       .solar-card.solar-jupiter
         .solar-name Jupiter
         .card-subtitle Twice as massive as all the other planets combined
@@ -113,6 +73,9 @@ block content
         .card-body 142 984 km
         .card-head Length of year
         .card-body 4 333 Earth days
+    .solar-caption.solar-saturn
+      .solar-object
+      .solar-name Saturn
       .solar-card.solar-saturn
         .solar-name Saturn
         .card-subtitle Jewel of Our Solar System
@@ -122,6 +85,9 @@ block content
         .card-body 120 536 km
         .card-head Length of year
         .card-body 10 759 Earth days
+    .solar-caption.solar-uranus
+      .solar-object
+      .solar-name Uranus
       .solar-card.solar-uranus
         .solar-name Uranus
         .card-subtitle The Sideways Planet
@@ -131,6 +97,9 @@ block content
         .card-body 51 118 km
         .card-head Length of year
         .card-body 30 687 Earth days
+    .solar-caption.solar-neptune
+      .solar-object
+      .solar-name Neptune
       .solar-card.solar-neptune
         .solar-name Neptune
         .card-subtitle The Windiest Planet
@@ -140,6 +109,39 @@ block content
         .card-body 49 528 km
         .card-head Length of year
         .card-body 60 190 Earth days
+    .solar-system
+      .solar-orbit.solar-sun
+        .solar-object
+      .solar-orbit.solar-mercury
+        .solar-object
+      .solar-orbit.solar-venus
+        .solar-object
+      .solar-orbit.solar-earth
+        .solar-object
+          .solar-moon
+            .solar-object
+      .solar-orbit.solar-mars
+        .solar-object
+      .solar-orbit.solar-asteroidbelt
+      .solar-orbit.solar-jupiter
+        .solar-object
+      .solar-orbit.solar-saturn
+        .solar-object
+      .solar-orbit.solar-uranus
+        .solar-object
+      .solar-orbit.solar-neptune
+        .solar-object
+    
+    //- Cards
+    .solar-cards
+      .solar-card.solar-sun
+        .solar-name Sun
+        .card-subtitle Our Star
+        .card-head Star type
+        .card-body Yellow Dwarf
+        .card-head Age
+        .card-body ~4.5 billion years
+      
   .solar-ads
     script(async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js")
     ins.adsbygoogle(style="display:inline-block;width:120px;height:240px" data-ad-client="ca-pub-2225124559530218" data-ad-slot="5087273059")
