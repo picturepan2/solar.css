@@ -69,9 +69,9 @@ body {
   height: 100vh;
   width: 100vw;
 
-  &.3d {
+  &.solar-3d {
     perspective: 500rem;
-    transform: rotateX(65deg);
+    transform: rotateX(60deg);
     transform-style: preserve-3d;
 
     .solar-orbit {
@@ -84,7 +84,7 @@ body {
   
     .solar-captions {
       perspective: 500rem;
-      transform: rotateX(-65deg) translateY(7.5rem);
+      transform: rotateX(-60deg) translateY(7.5rem);
       transform-style: preserve-3d;
     }
   

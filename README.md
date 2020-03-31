@@ -1,7 +1,17 @@
 # Solar.css
 ## Pure CSS Solar System Animation
 
-## Data
+### Exploration
+- Solar system: The planets, objects and orbits around the Sun are illustrated by pure CSS at scale for their relative sizes.
+- Distances to the Sun are mathematically scaled and positioned for ideal view.
+- Animation durations are timely scaled relative to the Earth year by true sidereal periods. One Earth year in the animation is 5 seconds.
+- The Asteroid belt is generated with pure CSS.
+- 3D Mode is in development.
+- Some fun micro-animations.
+
+If you enjoy it, please consider [donating via Paypal](https://www.paypal.me/picturepan2) or [Buy me a coffee](https://www.buymeacoffee.com/yanzhu).
+
+### Data
 |Object       |Radius (km) |Sidereal Period (yr) |Distance to the Sun (km) |
 |-------------|------------|---------------------|-------------------------|
 |Sun          |696000      |-                    |-                        |
@@ -15,6 +25,6 @@
 |Neptune      |24622       |164.8                |4498400000               |
 |Moon (Earth) |1737        |0.0748               |-                        |
 
-## Sources
+### Data sources
 - [NASA Solar System Exploration](https://solarsystem.nasa.gov/)
 - [Solar System - Wikipedia](https://en.wikipedia.org/wiki/Solar_System)
