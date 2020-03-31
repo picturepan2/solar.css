@@ -200,26 +200,20 @@ body {
 
 // Sun
 .solar-sun {
-  &::before {
-    background: currentColor;
-    border-radius: 50%;
-    //box-shadow: asteroids(150, $max-rad, 0);
-    color: rgba($gray-color, .25);
-    content: "";
-    display: block;
-    left: 50%;
-    height: .1rem;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: .1rem;
+  &:hover {
+    & > .solar-object {
+      &::before {
+        box-shadow: 0 0 7500vh $sun-color;
+      }
+    }
   }
 
   & > .solar-object {
     &::before {
       background: $sun-color;
-      box-shadow: 0 0 200rem rgba($sun-color, .25);
+      box-shadow: 0 0 750vh rgba($sun-color, .25);
       height: 750vh;
+      transition: box-shadow 1s ease-in-out;
       width: 750vh;
     }
   }
@@ -528,37 +522,37 @@ body {
   position: fixed;
   width: 90vw;
   z-index: 9999;
+}
 
-  .solar-caption {
-    display: flex;
-    height: 2rem;
-    line-height: 1rem;
-    opacity: .4;
-    padding: .5rem;
+.solar-caption {
+  display: flex;
+  height: 2rem;
+  line-height: 1rem;
+  opacity: .4;
+  padding: .5rem;
+  position: relative;
+
+  .solar-object {
+    height: 1rem;
+    margin-right: .5rem;
     position: relative;
 
-    .solar-object {
-      height: 1rem;
-      margin-right: .5rem;
-      position: relative;
-
-      &::before {
-        border: 10rem solid rgba($dark-color, .15);
-        border-radius: 50%;
-        content: "";
-        display: block;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%) scale(.01);
-      }
+    &::before {
+      border: 10rem solid rgba($dark-color, .15);
+      border-radius: 50%;
+      content: "";
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(.01);
     }
+  }
 
-    .solar-name {
-      font-size: .6rem;
-      font-weight: 900;
-      text-transform: uppercase;
-    }
+  .solar-name {
+    font-size: .6rem;
+    font-weight: 900;
+    text-transform: uppercase;
   }
 }
 
