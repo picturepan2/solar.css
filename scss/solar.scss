@@ -5,8 +5,8 @@
 @import "spectre";
 
 //- Core variables
-$base-rad: 50rem;
-$max-rad: 35rem;
+$base-rad: 5rem;
+$max-rad: 3.5rem;
 $base-distance: 3.5rem;
 $max-distance: 52.5rem;
 $base-period: 5s;
@@ -66,12 +66,32 @@ body {
 }
 
 .solar-system {
-  align-items: center;
-  display: flex;
   height: 100vh;
-  justify-content: center;
-  overflow: hidden;
   width: 100vw;
+
+  &.3d {
+    perspective: 500rem;
+    transform: rotateX(65deg);
+    transform-style: preserve-3d;
+
+    .solar-orbit {
+      .solar-object {
+        perspective: 500rem;
+        transform: rotateZ(-30deg);
+        transform-style: preserve-3d;
+      }
+    }
+  
+    .solar-captions {
+      perspective: 500rem;
+      transform: rotateX(-65deg) translateY(7.5rem);
+      transform-style: preserve-3d;
+    }
+  
+    .solar-cards {
+      display: none;
+    }
+  }
 }
 
 .solar-orbit {
@@ -98,14 +118,14 @@ body {
     width: 0 !important;
     
     &::before {
-      border: 10rem solid rgba($dark-color, .15);
+      border: 1rem solid rgba($dark-color, .15);
       border-radius: 50%;
       content: "";
       display: block;
       left: 100%;
       position: absolute;
       top: 50%;
-      transform: translate(-50%, -50%) scale(.01);
+      transform: translate(-50%, -50%) scale(.1);
     }
   }
 
@@ -203,7 +223,7 @@ body {
   &:hover {
     & > .solar-object {
       &::before {
-        box-shadow: 0 0 7500vh $sun-color;
+        box-shadow: 0 0 750vh $sun-color;
       }
     }
   }
@@ -212,9 +232,9 @@ body {
     &::before {
       background: $sun-color;
       box-shadow: 0 0 750vh rgba($sun-color, .25);
-      height: 750vh;
+      height: 40rem;
       transition: box-shadow 1s ease-in-out;
-      width: 750vh;
+      width: 40rem;
     }
   }
   &:hover {
@@ -235,7 +255,7 @@ body {
 // Mercury
 .solar-mercury {
   & > .solar-object {
-    width: object-size($mercury-rad) / 100;
+    width: object-size($mercury-rad) / 10;
 
     &::before {
       background: $mercury-color;
@@ -261,7 +281,7 @@ body {
 // Venus
 .solar-venus {
   & > .solar-object {
-    width: object-size($venus-rad) / 100;
+    width: object-size($venus-rad) / 10;
 
     &::before {
       background: $venus-color;
@@ -287,7 +307,7 @@ body {
 // Earth
 .solar-earth {
   & > .solar-object {
-    width: object-size($earth-rad) / 100;
+    width: object-size($earth-rad) / 10;
 
     &::before {
       background: $earth-color;
@@ -313,7 +333,7 @@ body {
 // Mars
 .solar-mars {
   & > .solar-object {
-    width: object-size($mars-rad) / 100;
+    width: object-size($mars-rad) / 10;
 
     &::before {
       background: $mars-color;
@@ -364,7 +384,7 @@ body {
 // Jupiter
 .solar-jupiter {
   & > .solar-object {
-    width: object-size($jupiter-rad) / 100;
+    width: object-size($jupiter-rad) / 10;
 
     &::before {
       background: $jupiter-color;
@@ -390,11 +410,11 @@ body {
 // Saturn
 .solar-saturn {
   & > .solar-object {
-    width: object-size($saturn-rad) / 100;
+    width: object-size($saturn-rad) / 10;
 
     &::before {
       background: $saturn-color;
-      box-shadow: 0 0 0 20rem $dark-color, 0 0 0 40rem rgba($saturn-color, .2), 0 0 0 60rem rgba($saturn-color, .1);
+      box-shadow: 0 0 0 2rem $dark-color, 0 0 0 4rem rgba($saturn-color, .2), 0 0 0 6rem rgba($saturn-color, .1);
       height: object-size($saturn-rad);
       width: object-size($saturn-rad);
     }
@@ -417,7 +437,7 @@ body {
 // Uranus
 .solar-uranus {
   & > .solar-object {
-    width: object-size($uranus-rad) / 100;
+    width: object-size($uranus-rad) / 10;
 
     &::before {
       background: $uranus-color;
@@ -443,7 +463,7 @@ body {
 // Neptune
 .solar-neptune {
   & > .solar-object {
-    width: object-size($neptune-rad) / 100;
+    width: object-size($neptune-rad) / 10;
 
     &::before {
       background: $neptune-color;
@@ -538,14 +558,14 @@ body {
     position: relative;
 
     &::before {
-      border: 10rem solid rgba($dark-color, .15);
+      border: 1rem solid rgba($dark-color, .15);
       border-radius: 50%;
       content: "";
       display: block;
       position: absolute;
       left: 50%;
       top: 50%;
-      transform: translate(-50%, -50%) scale(.01);
+      transform: translate(-50%, -50%) scale(.1);
     }
   }
 
