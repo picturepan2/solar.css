@@ -51,6 +51,7 @@ $mercury-period: 0.240846;
 $venus-period: 0.615;
 $earth-period: 1;
 $mars-period: 1.881;
+$asteroidbelt-period: 4.5;
 $jupiter-period: 11.86;
 $saturn-period: 29.46;
 $uranus-period: 84.01;
@@ -150,8 +151,10 @@ body {
 
   // Asteroid Belt
   &.solar-asteroidbelt {
+    animation: orbit ($base-period * $asteroidbelt-period) linear infinite;
     height: orbit-size($asteroidbelt-distance);
     width: orbit-size($asteroidbelt-distance);
+    z-index: 55;
   }
 
   // Jupiter
@@ -200,16 +203,16 @@ body {
   &::before {
     background: currentColor;
     border-radius: 50%;
-    box-shadow: asteroids(200, $max-rad, 0);
-    color: rgba($gray-color, .5);
+    //box-shadow: asteroids(150, $max-rad, 0);
+    color: rgba($gray-color, .25);
     content: "";
     display: block;
     left: 50%;
-    height: .05rem;
+    height: .1rem;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: .05rem;
+    width: .1rem;
   }
 
   & > .solar-object {
@@ -343,19 +346,24 @@ body {
 .solar-asteroidbelt {
   overflow: hidden;
 
+  &::after,
   &::before {
     background: currentColor;
     border-radius: 50%;
-    box-shadow: asteroids(100, 60vh, 10vh); // 50vh - 60vh
-    color: rgba($gray-color, .5);
+    box-shadow: asteroids(100, ceil(orbit-size($asteroidbelt-distance)), 1.5rem);
+    color: rgba($gray-color, .25);
     content: "";
     display: block;
     left: 50%;
-    height: .05rem;
+    height: .1rem;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: .05rem;
+    width: .1rem;
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
   }
 }
 
@@ -519,6 +527,7 @@ body {
   left: 5vw;
   position: fixed;
   width: 90vw;
+  z-index: 9999;
 
   .solar-caption {
     display: flex;
