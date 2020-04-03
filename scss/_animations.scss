@@ -21,9 +21,18 @@
 
 @keyframes orbit {
   0% {
-    transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate3d(-50%, -50%, 0) rotateZ(0);
   }
   100% {
-    transform: translate(-50%, -50%) rotate(-360deg);
+    transform: translate3d(-50%, -50%, 0) rotateZ(-360deg);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: translate3d(-50%, -50%, 0) rotateX(-180deg) rotateY(245deg);
+  }
+  100% {
+    transform: translate3d(-50%, -50%, 0) rotateX(-180deg) rotateY(245deg);
   }
 }

@@ -9,7 +9,7 @@ $base-rad: 5rem;
 $max-rad: 10rem;
 $base-distance: 3.5rem;
 $max-distance: 52.5rem;
-$base-period: 5s;
+$base-period: 10s;
 //- Color
 $sun-color: #FA6D00;
 $mercury-color: #F9AF0E;
@@ -84,14 +84,29 @@ body {
   z-index: -1;
 
   &.solar-3d {
-    perspective: 500rem;
-    transform: perspective(500rem) rotateX(65deg);
+    perspective: 5rem;
+    transform: rotateX(65deg) scale(1.5);
     transform-style: preserve-3d;
 
     .solar-orbit {
-      perspective: 500rem;
-      transform: rotateZ(-65deg);
-      transform-style: preserve-3d;
+      animation: none !important;
+      
+      .solar-object {
+        transform: translate3d(-50%, -50%, 0) rotateX(-180deg) rotateY(245deg) rotateZ(0);
+        transform-style: preserve-3d;
+      }
+
+      &.solar-saturn {
+        //animation: orbit ($base-period * $saturn-period) linear infinite !important;
+        transform: translate3d(-50%, -50%, 0) rotateZ(-180deg);
+
+        .solar-object {
+          animation: rotation ($base-period * $saturn-period) linear infinite;
+          //- 90 transform: translate3d(-50%, -50%, 0) rotateX(-65deg) rotateY(180deg) rotateZ(0);
+          //- 180 transform: translate3d(-50%, -50%, 0) rotateX(-180deg) rotateY(245deg) rotateZ(0);
+          transform: translate3d(-50%, -50%, 0) rotateX(-180deg) rotateY(245deg) rotateZ(0);
+        }
+      }
     }
   }
 }
@@ -103,7 +118,7 @@ body {
   left: 50%;
   position: absolute;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate3d(-50%, -50%, 0);
   transition: border .2s ease-in-out;
 
   &:hover {
@@ -123,10 +138,10 @@ body {
       border-radius: 50%;
       content: "";
       display: block;
-      left: 100%;
+      left: 50%;
       position: absolute;
       top: 50%;
-      transform: translate(-50%, -50%) scale(.1);
+      transform: translate3d(-50%, -50%, 0) scale(.1);
     }
   }
 
@@ -356,12 +371,12 @@ body {
     height: .1rem;
     position: absolute;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate3d(-50%, -50%, 0);
     width: .1rem;
   }
 
   &::after {
-    transform: translate(-50%, -50%) rotate(-45deg);
+    transform: translate3d(-50%, -50%, 0) rotate(-45deg);
   }
 }
 
@@ -515,7 +530,7 @@ body {
       position: absolute;
       left: 50%;
       top: 50%;
-      transform: translate(-50%, -50%) scale(.1);
+      transform: translate3d(-50%, -50%, 0) scale(.1);
     }
   }
 

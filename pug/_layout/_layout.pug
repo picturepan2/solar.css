@@ -31,11 +31,12 @@ html(lang= lang)
     meta(property='og:type' content='website')
     meta(property='og:description' content= description)
     if slug != parent
+      link(rel='icon' href='../assets/img/favicon.png')
       link(rel='stylesheet' href='../assets/css/solar.css')
     else
+      link(rel='icon' href='assets/img/favicon.png')
       link(rel='stylesheet' href='assets/css/solar.css')
     link(rel='canonical' href= url)
-    
 
   body
     block content
