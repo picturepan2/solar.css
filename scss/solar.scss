@@ -5,8 +5,8 @@
 @import "spectre";
 
 //- Core variables
-$base-rad: 5rem;
-$max-rad: 10rem;
+$base-rad: .5rem;
+$max-rad: 1.25rem;
 $base-distance: 3.5rem;
 $max-distance: 52.5rem;
 $base-period: 10s;
@@ -84,27 +84,27 @@ body {
   z-index: -1;
 
   &.solar-3d {
-    perspective: 5rem;
-    transform: rotateX(65deg) scale(1.5);
+    perspective: 50rem;
+    transform: rotateX(70deg) scale(1.5);
     transform-style: preserve-3d;
 
     .solar-orbit {
       animation: none !important;
       
       .solar-object {
-        transform: translate3d(-50%, -50%, 0) rotateX(-180deg) rotateY(245deg) rotateZ(0);
+        //transform: translate3d(-50%, -50%, 0) rotateX(-65deg) rotateY(245deg) rotateZ(0);
         transform-style: preserve-3d;
       }
 
       &.solar-saturn {
         //animation: orbit ($base-period * $saturn-period) linear infinite !important;
-        transform: translate3d(-50%, -50%, 0) rotateZ(-180deg);
+        //transform: translate3d(-50%, -50%, 0) rotateZ(-180deg);
 
         .solar-object {
-          animation: rotation ($base-period * $saturn-period) linear infinite;
+          //animation: rotation ($base-period * $saturn-period) linear infinite;
           //- 90 transform: translate3d(-50%, -50%, 0) rotateX(-65deg) rotateY(180deg) rotateZ(0);
           //- 180 transform: translate3d(-50%, -50%, 0) rotateX(-180deg) rotateY(245deg) rotateZ(0);
-          transform: translate3d(-50%, -50%, 0) rotateX(-180deg) rotateY(245deg) rotateZ(0);
+          transform: translate3d(-50%, -50%, 0) rotateX(-90deg) rotateY(180deg) rotateZ(0);
         }
       }
     }
@@ -134,14 +134,14 @@ body {
     width: 0 !important;
     
     &::before {
-      border: 1rem solid rgba($dark-color, .15);
+      border: .1rem solid rgba($dark-color, .15);
       border-radius: 50%;
       content: "";
       display: block;
       left: 50%;
       position: absolute;
       top: 50%;
-      transform: translate3d(-50%, -50%, 0) scale(.1);
+      transform: translate3d(-50%, -50%, 0);
     }
   }
 
@@ -228,9 +228,9 @@ body {
   // Moon
   .solar-moon {
     animation: orbit ($base-period * $moon-period) linear infinite;
-    height: .8rem;
+    height: .9rem;
     top: 100%;
-    width: .8rem;
+    width: .9rem;
   }
 }
 
@@ -239,7 +239,7 @@ body {
   &:hover {
     & > .solar-object {
       &::before {
-        box-shadow: 0 0 750vh $sun-color;
+        box-shadow: 0 0 75vh $sun-color;
       }
     }
   }
@@ -247,10 +247,10 @@ body {
   & > .solar-object {
     &::before {
       background: $sun-color;
-      box-shadow: 0 0 750vh rgba($sun-color, .25);
-      height: 40rem;
+      box-shadow: 0 0 75vh rgba($sun-color, .25);
+      height: 4rem;
       transition: box-shadow 1s ease-in-out;
-      width: 40rem;
+      width: 4rem;
     }
   }
 }
@@ -258,7 +258,7 @@ body {
 // Mercury
 .solar-mercury {
   & > .solar-object {
-    width: object-size($mercury-rad) / 10;
+    width: object-size($mercury-rad);
 
     &::before {
       background: $mercury-color;
@@ -283,7 +283,7 @@ body {
 // Venus
 .solar-venus {
   & > .solar-object {
-    width: object-size($venus-rad) / 10;
+    width: object-size($venus-rad);
 
     &::before {
       background: $venus-color;
@@ -308,7 +308,7 @@ body {
 // Earth
 .solar-earth {
   & > .solar-object {
-    width: object-size($earth-rad) / 10;
+    width: object-size($earth-rad);
 
     &::before {
       background: $earth-color;
@@ -333,7 +333,7 @@ body {
 // Mars
 .solar-mars {
   & > .solar-object {
-    width: object-size($mars-rad) / 10;
+    width: object-size($mars-rad);
 
     &::before {
       background: $mars-color;
@@ -383,7 +383,7 @@ body {
 // Jupiter
 .solar-jupiter {
   & > .solar-object {
-    width: object-size($jupiter-rad) / 10;
+    width: object-size($jupiter-rad);
 
     &::before {
       background: $jupiter-color;
@@ -408,11 +408,11 @@ body {
 // Saturn
 .solar-saturn {
   & > .solar-object {
-    width: object-size($saturn-rad) / 10;
+    width: object-size($saturn-rad);
 
     &::before {
       background: $saturn-color;
-      box-shadow: 0 0 0 2rem $dark-color, 0 0 0 4rem rgba($saturn-color, .2), 0 0 0 5rem rgba($saturn-color, .1), 0 0 0 7rem rgba($saturn-color, .1);
+      box-shadow: 0 0 0 .2rem $dark-color, 0 0 0 .4rem rgba($saturn-color, .2), 0 0 0 .5rem rgba($saturn-color, .1), 0 0 0 .7rem rgba($saturn-color, .1);
       height: object-size($saturn-rad);
       width: object-size($saturn-rad);
     }
@@ -434,7 +434,7 @@ body {
 // Uranus
 .solar-uranus {
   & > .solar-object {
-    width: object-size($uranus-rad) / 10;
+    width: object-size($uranus-rad);
 
     &::before {
       background: $uranus-color;
@@ -459,7 +459,7 @@ body {
 // Neptune
 .solar-neptune {
   & > .solar-object {
-    width: object-size($neptune-rad) / 10;
+    width: object-size($neptune-rad);
 
     &::before {
       background: $neptune-color;
@@ -523,14 +523,14 @@ body {
     position: relative;
 
     &::before {
-      border: 1rem solid rgba($dark-color, .15);
+      border: .1rem solid rgba($dark-color, .15);
       border-radius: 50%;
       content: "";
       display: block;
       position: absolute;
       left: 50%;
       top: 50%;
-      transform: translate3d(-50%, -50%, 0) scale(.1);
+      transform: translate3d(-50%, -50%, 0);
     }
   }
 
@@ -616,4 +616,5 @@ body {
   display: block;
   position: fixed;
   right: 1rem;
+  z-index: 9999;
 }

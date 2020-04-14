@@ -1841,8 +1841,8 @@ body {
 }
 
 .solar-system.solar-3d {
-  perspective: 5rem;
-  transform: rotateX(65deg) scale(1.5);
+  perspective: 50rem;
+  transform: rotateX(70deg) scale(1.5);
   transform-style: preserve-3d;
 }
 
@@ -1851,17 +1851,11 @@ body {
 }
 
 .solar-system.solar-3d .solar-orbit .solar-object {
-  transform: translate3d(-50%, -50%, 0) rotateX(-180deg) rotateY(245deg) rotateZ(0);
   transform-style: preserve-3d;
 }
 
-.solar-system.solar-3d .solar-orbit.solar-saturn {
-  transform: translate3d(-50%, -50%, 0) rotateZ(-180deg);
-}
-
 .solar-system.solar-3d .solar-orbit.solar-saturn .solar-object {
-  animation: rotation 294.6s linear infinite;
-  transform: translate3d(-50%, -50%, 0) rotateX(-180deg) rotateY(245deg) rotateZ(0);
+  transform: translate3d(-50%, -50%, 0) rotateX(-90deg) rotateY(180deg) rotateZ(0);
 }
 
 .solar-orbit {
@@ -1889,14 +1883,14 @@ body {
 }
 
 .solar-orbit .solar-object::before {
-  border: 1rem solid rgba(24, 24, 24, .15);
+  border: .1rem solid rgba(24, 24, 24, .15);
   border-radius: 50%;
   content: "";
   display: block;
   left: 50%;
   position: absolute;
   top: 50%;
-  transform: translate3d(-50%, -50%, 0) scale(.1);
+  transform: translate3d(-50%, -50%, 0);
 }
 
 .solar-orbit.solar-sun {
@@ -1971,31 +1965,31 @@ body {
 
 .solar-orbit .solar-moon {
   animation: orbit .75s linear infinite;
-  height: .8rem;
+  height: .9rem;
   top: 100%;
-  width: .8rem;
+  width: .9rem;
 }
 
 .solar-sun:hover > .solar-object::before {
-  box-shadow: 0 0 750vh #fa6d00;
+  box-shadow: 0 0 75vh #fa6d00;
 }
 
 .solar-sun > .solar-object::before {
   background: #fa6d00;
-  box-shadow: 0 0 750vh rgba(250, 109, 0, .25);
-  height: 40rem;
+  box-shadow: 0 0 75vh rgba(250, 109, 0, .25);
+  height: 4rem;
   transition: box-shadow 1s ease-in-out;
-  width: 40rem;
+  width: 4rem;
 }
 
 .solar-mercury > .solar-object {
-  width: .53rem;
+  width: .54rem;
 }
 
 .solar-mercury > .solar-object::before {
   background: #f9af0e;
-  height: 5.35rem;
-  width: 5.35rem;
+  height: .54rem;
+  width: .54rem;
 }
 
 .solar-mercury.solar-caption:hover ~ .solar-system .solar-mercury {
@@ -2005,13 +1999,13 @@ body {
 }
 
 .solar-venus > .solar-object {
-  width: .59rem;
+  width: .61rem;
 }
 
 .solar-venus > .solar-object::before {
   background: #f1b72c;
-  height: 5.87rem;
-  width: 5.87rem;
+  height: .61rem;
+  width: .61rem;
 }
 
 .solar-venus.solar-caption:hover ~ .solar-system .solar-venus {
@@ -2021,13 +2015,13 @@ body {
 }
 
 .solar-earth > .solar-object {
-  width: .59rem;
+  width: .61rem;
 }
 
 .solar-earth > .solar-object::before {
   background: #538fc1;
-  height: 5.91rem;
-  width: 5.91rem;
+  height: .61rem;
+  width: .61rem;
 }
 
 .solar-earth.solar-caption:hover ~ .solar-system .solar-earth {
@@ -2037,13 +2031,13 @@ body {
 }
 
 .solar-mars > .solar-object {
-  width: .55rem;
+  width: .56rem;
 }
 
 .solar-mars > .solar-object::before {
   background: #f5805b;
-  height: 5.48rem;
-  width: 5.48rem;
+  height: .56rem;
+  width: .56rem;
 }
 
 .solar-mars.solar-caption:hover ~ .solar-system .solar-mars {
@@ -2060,7 +2054,7 @@ body {
 .solar-asteroidbelt::before {
   background: currentColor;
   border-radius: 50%;
-  box-shadow: 0 0, -9.63rem 5.08rem, -9.18rem -4.05rem, -9.08rem 2.82rem, -10.08rem -5.3rem, -9.48rem -3.21rem, -9.35rem -4.12rem, -9.5rem .33rem, -9.05rem .73rem, -9.03rem 2.27rem, -10.44rem 1.23rem, -9.05rem -1.75rem, -9.09rem 5.87rem, -10.11rem -1.64rem, -9.41rem -2.84rem, -10.44rem 5.48rem, -9.23rem -3.76rem, -9.86rem -5.57rem, -10.13rem -1.02rem, -10.01rem -5.53rem, -9.04rem 4.9rem, -10.3rem -3.2rem, -9.78rem .5rem, -9.59rem 2.52rem, -9.08rem -3.06rem, -9.79rem -.91rem, -9.3rem -.33rem, -9.53rem .38rem, -9.62rem 4.23rem, -9.09rem 3.06rem, -9.29rem -5.15rem, -9.34rem 1.32rem, -9.94rem 5.83rem, -9.22rem 3.53rem, -9.71rem 4.85rem, -9.92rem -4.89rem, -10.24rem -2.43rem, -9.97rem -5.58rem, -9.16rem -5.96rem, -10.08rem 5.23rem, -10.31rem .03rem, -9.33rem -4.65rem, -9.82rem 4.31rem, -9.22rem 3.5rem, -9.21rem 4.09rem, -9.8rem 1.08rem, -9.59rem -1.9rem, -10.41rem -1.23rem, -9.47rem -4.57rem, -9.18rem -1.64rem, -9.54rem -1.82rem, -9.03rem 3.74rem, -10.45rem .24rem, -10.22rem -4.06rem, -10.22rem 1.72rem, -9.34rem 3.65rem, -10.05rem 2.58rem, -9.37rem 1rem, -9.82rem 1.33rem, -9.83rem 4.74rem, -9.83rem -2.95rem, -9.04rem 4.62rem, -9rem 4.28rem, -10.03rem .62rem, -9.34rem 5.57rem, -9.66rem -.95rem, -10.15rem 2.16rem, -10.38rem -5.06rem, -9.46rem 2.2rem, -9.69rem 4.21rem, -9.2rem 2.02rem, -9.51rem -3.57rem, -9.12rem 0rem, -9.86rem -1.1rem, -9.25rem -4.57rem, -9.13rem -2.2rem, -10.24rem -3.53rem, -9.45rem 3.59rem, -10.08rem -3.42rem, -9.54rem -3.57rem, -9.92rem 2.29rem, -9.4rem -3.17rem, -10.24rem -.6rem, -10.27rem 3.06rem, -9.91rem -1.95rem, -10.31rem .15rem, -9.11rem .66rem, -10.25rem -5.42rem, -10.32rem -.59rem, -9.98rem 1.51rem, -9.2rem -2.17rem, -9.7rem -5.29rem, -9.8rem -5.2rem, -10.16rem -3.56rem, -9.49rem 4.73rem, -10.11rem 4.57rem, -9.66rem -1.69rem, -10.36rem 3.9rem, -9.52rem -2.62rem, -9.86rem -5.14rem, 9.03rem 4.78rem, 9.55rem 4.6rem, 9.43rem 5.53rem, 9.63rem .63rem, 9.49rem -1.81rem, 10.26rem -3.74rem, 9.86rem 3.88rem, 9.92rem -4.88rem, 10.4rem -2.54rem, 10.49rem .37rem, 9.57rem -.71rem, 10.08rem -3.44rem, 9.39rem -2.82rem, 10.27rem 3.28rem, 10.23rem .96rem, 9.97rem .58rem, 10.02rem 5.47rem, 9.47rem 2.83rem, 9.77rem -3.61rem, 9.58rem .03rem, 9.23rem .52rem, 9.62rem .65rem, 9.81rem 1.09rem, 9.52rem 3.34rem, 10.34rem -4.89rem, 10.29rem -4.53rem, 9.25rem -5.27rem, 9.46rem 2.69rem, 10.13rem 3.48rem, 9.87rem 5.4rem, 9.78rem -1.14rem, 10.48rem -2.35rem, 9.35rem -4.6rem, 10.2rem -5.76rem, 9.5rem 3.12rem, 10.27rem -1.15rem, 10.42rem -3.29rem, 10.26rem -4.33rem, 9.71rem 5.93rem, 9.51rem 3.74rem, 10.16rem -5.83rem, 9.36rem 1.05rem, 9.31rem 3.28rem, 9.26rem -4.4rem, 9.6rem 2.45rem, 9.46rem -1.37rem, 9.62rem 2.07rem, 9.55rem -3.58rem, 9.03rem -.96rem, 9.1rem 2.99rem, 9.57rem 4.3rem, 9.48rem .78rem, 10.29rem -1.69rem, 9.82rem -1.59rem, 9.84rem -5.96rem, 10.23rem 5.44rem, 9.56rem -1.03rem, 9.1rem -1.14rem, 10.27rem .85rem, 9.14rem -1.14rem, 9.26rem -2.62rem, 10.23rem -2.29rem, 9.25rem -2.24rem, 9.6rem -5.51rem, 10.4rem 2.96rem, 9.62rem 4.08rem, 9.35rem -.51rem, 9.62rem -1.7rem, 9.51rem 1.96rem, 9.85rem -4.5rem, 10.11rem 4.03rem, 9.71rem 4.27rem, 9.72rem 1.43rem, 9.55rem -2.68rem, 9.76rem 4.11rem, 9.5rem -1.26rem, 10.05rem .85rem, 10.37rem 3.85rem, 9.03rem -4.86rem, 10.32rem -5.53rem, 10.46rem 5.2rem, 9.15rem -3.5rem, 9.98rem 3.22rem, 9.69rem -.56rem, 10.15rem 5.57rem, 9.98rem 5.26rem, 10.22rem -3.12rem, 10.03rem -5.25rem, 9.57rem 3.06rem, 10.14rem -2.68rem, 9.19rem -3.75rem, 9.7rem -5.46rem, 9.14rem -4.52rem, 10.14rem 4.18rem, 9.15rem .01rem, 9.72rem -4.04rem, 10.43rem 5.24rem, 9.65rem 1.39rem, 9.03rem 4.88rem, 3.75rem 9.44rem, 2.57rem 9.14rem, -.35rem 9.44rem, -1.18rem 9.4rem, 1.9rem 9.14rem, -3.39rem 9.76rem, -5.87rem 9.55rem, -5.16rem 9.32rem, 5.88rem 10.07rem, 5.94rem 10.46rem, 5.27rem 9.53rem, -3.69rem 9.18rem, 3.72rem 9.08rem, 4.46rem 9.81rem, -4.86rem 9.62rem, 3.93rem 10.11rem, 2.63rem 9.24rem, 4.15rem 9.73rem, 1.4rem 9.19rem, .18rem 9.12rem, 2.13rem 9.54rem, -4.56rem 9.83rem, 5.54rem 9.02rem, 4.71rem 9.29rem, 4.79rem 9.81rem, 3.73rem 10.39rem, 4.65rem 9.37rem, 1.34rem 9.26rem, 1.65rem 9.26rem, 4.47rem 9.25rem, -.6rem 9.43rem, 2.11rem 9.65rem, .08rem 9.6rem, 1.34rem 9.81rem, -.18rem 9.85rem, 1.3rem 9.73rem, 5.13rem 9.62rem, -2.47rem 9.91rem, .59rem 10.28rem, 3.05rem 9.56rem, 2.72rem 10.04rem, -1.22rem 9.29rem, 2.64rem 9.69rem, .46rem 9.63rem, -2.89rem 9.8rem, 2.77rem 9.81rem, -.41rem 9.98rem, -4.19rem 9.44rem, .46rem 10.33rem, -.2rem 9.69rem, -1.06rem 10.19rem, 4.93rem 9.91rem, 3.55rem 9.42rem, -3.98rem 10.34rem, -5.19rem 9.21rem, .23rem 10.18rem, 1.55rem 10.06rem, .29rem 10.05rem, -4.91rem 9.15rem, 5.03rem 9.26rem, 4.55rem 10.4rem, -4.7rem 9.41rem, -5.95rem 10.11rem, 2.03rem 9.36rem, 2.97rem 9.97rem, .54rem 9.27rem, -2.52rem 10.34rem, -4.87rem 9.79rem, -5.38rem 10.01rem, -3.42rem 9.82rem, -1.35rem 9.8rem, .74rem 10.19rem, 1.19rem 10.16rem, 1.59rem 9.24rem, -2.93rem 9.22rem, -1.45rem 10.35rem, 1.93rem 10.46rem, 2.61rem 9.65rem, -2.76rem 9.8rem, 1.79rem 9.02rem, -.06rem 9.37rem, -3.78rem 9.53rem, -1.23rem 10.37rem, -1.36rem 9.09rem, -2.79rem 10.17rem, -2.86rem 10.22rem, -2.51rem 9.31rem, -4.48rem 10.08rem, 2.99rem 9.63rem, -.41rem 9.68rem, 2.31rem 9.95rem, 3.46rem 9.51rem, .77rem 9.82rem, 3.11rem 9.94rem, 1.61rem 9.69rem, -2.2rem 9.47rem, 3.09rem 9.83rem, -3.2rem 9.66rem, -1.94rem 9.34rem, -1.45rem -9.03rem, .51rem -9.53rem, 2.94rem -9.79rem, 5rem -9.15rem, 1.19rem -9.44rem, -5.18rem -9.01rem, 1.09rem -9.45rem, -5.66rem -10.25rem, 2.81rem -10.31rem, 1.74rem -10.11rem, -2.8rem -10.32rem, 1.34rem -9.65rem, -3.51rem -10.4rem, 3.53rem -9.15rem, -5.85rem -9.32rem, -4.07rem -10.38rem, -1.57rem -9.1rem, -3.1rem -9.14rem, -5.59rem -9.2rem, 2.62rem -10.49rem, -4.81rem -9.51rem, -5.37rem -10.23rem, 4.15rem -9.97rem, -4.52rem -10.18rem, .61rem -10.43rem, -.1rem -9.56rem, -1.03rem -10.04rem, .41rem -9.26rem, -1.47rem -9.07rem, 3.63rem -10.23rem, -2.75rem -9.17rem, 4.62rem -9.34rem, 5.45rem -9.23rem, 3.42rem -9.75rem, -4.85rem -9.97rem, -2.06rem -9.91rem, -3.65rem -9.96rem, -4.29rem -9.78rem, 5.14rem -10.27rem, 3.83rem -10.01rem, -4.2rem -10.14rem, .64rem -9.24rem, -4.77rem -9.04rem, -3.94rem -9.76rem, -1.11rem -9.72rem, 1.3rem -10.28rem, 1.08rem -9.63rem, -.96rem -9.4rem, -5.57rem -10.17rem, -3.74rem -10.48rem, -5.97rem -9.07rem, -5.35rem -9.83rem, 2.05rem -9.78rem, 3.07rem -10.07rem, 1.68rem -9.71rem, 2.3rem -9.3rem, -5.87rem -10.03rem, 1.69rem -9.52rem, -2.34rem -10.03rem, -5.5rem -9.3rem, 3.02rem -9.6rem, -.26rem -9.21rem, -1.54rem -10.27rem, -4.83rem -10.34rem, -2.39rem -10.3rem, -5.23rem -9.25rem, -1.03rem -10.09rem, -4.96rem -9.93rem, -3.06rem -9.76rem, 1.83rem -9.2rem, -5.45rem -10.3rem, 4.74rem -9.47rem, -4.91rem -9.27rem, .58rem -9.46rem, -3.53rem -9.6rem, .04rem -9.4rem, 4.55rem -10.3rem, 3.33rem -9.15rem, .3rem -10.06rem, -1.69rem -9.93rem, -1.51rem -9.29rem, -1.06rem -9.09rem, 4.59rem -9.53rem, .94rem -9.49rem, -2.08rem -9.72rem, 1.69rem -10.32rem, -2.39rem -10.3rem, 3.94rem -9.79rem, 1.18rem -9.98rem, -5.01rem -10.48rem, -5.07rem -10.01rem, -5.48rem -10.29rem, -2.43rem -9.23rem, -4.67rem -10.14rem, 5.35rem -10.46rem, -2.03rem -9.31rem, -1.63rem -10.12rem, 4.65rem -9.31rem, -2.82rem -10.03rem;
+  box-shadow: 0 0, -10.36rem -1.11rem, -9.58rem -5.28rem, -10.13rem -1.43rem, -9.96rem 4.17rem, -10.41rem -2.23rem, -9.43rem 1.1rem, -9.88rem -4.01rem, -10.14rem -4.93rem, -10.23rem -5.58rem, -10.3rem 3.05rem, -9.57rem 2.16rem, -9.21rem 2.34rem, -9.84rem -5.02rem, -9.77rem -.53rem, -9.25rem 3.81rem, -9.5rem 2.47rem, -9.41rem -2.25rem, -9.54rem -2.11rem, -10.23rem 1.64rem, -9.67rem -1.08rem, -9.25rem -5.69rem, -10.27rem 5.45rem, -9.32rem 1.81rem, -10.37rem -3.39rem, -9.6rem -3.18rem, -9.72rem -.34rem, -9.1rem -2.69rem, -10.48rem 2.62rem, -9.66rem -1.04rem, -9.53rem -5.55rem, -9.17rem -5.9rem, -9.73rem 3.81rem, -9.26rem -5.25rem, -9.9rem -1.58rem, -9.17rem -4.12rem, -10.47rem -4.15rem, -9.5rem -2.2rem, -9.37rem 5.65rem, -10.44rem 3.64rem, -9.5rem 2.17rem, -9.27rem -2.91rem, -9.94rem -1.49rem, -9.3rem .38rem, -9.38rem -1.78rem, -9.79rem -3.36rem, -9.23rem 2.04rem, -10.45rem -2.61rem, -10.47rem 2.55rem, -9.86rem .8rem, -9.54rem 5.91rem, -10.29rem -2.47rem, -10.01rem 2.09rem, -9.97rem 5.18rem, -9.82rem .84rem, -9.63rem -.63rem, -9.55rem 2.4rem, -9.44rem .46rem, -10.08rem -2.06rem, -10.33rem 2.43rem, -10.05rem 4.1rem, -9.67rem -3.17rem, -10.22rem 3.1rem, -10.24rem -1.99rem, -9rem 1.43rem, -9.76rem 3.09rem, -9.89rem 1.87rem, -9.8rem 5.81rem, -10.34rem -3.28rem, -9rem -1.19rem, -9.41rem -5.84rem, -9.99rem 4.72rem, -10.34rem -5.74rem, -10.3rem 5.12rem, -9.75rem -.27rem, -9.31rem -3.55rem, -9.67rem -3.13rem, -9.75rem -.61rem, -9.29rem -3.65rem, -9.6rem 0rem, -9.19rem -2.61rem, -9.54rem -1.87rem, -10.17rem 4.68rem, -9.51rem -3.82rem, -9.75rem 5.46rem, -9.36rem 5.24rem, -9.01rem -1.37rem, -9.27rem -3.26rem, -9.76rem -.59rem, -10.21rem 1.17rem, -9.16rem -2.94rem, -9.72rem -1.22rem, -9.27rem -3.21rem, -9.59rem -.58rem, -9.82rem 4.28rem, -9.27rem 1.53rem, -9.7rem -.44rem, -10.18rem 2.13rem, -10.04rem .98rem, -9.19rem -4.76rem, 9.84rem -1.31rem, 9.02rem -.35rem, 9.41rem -3.43rem, 10.07rem -4.47rem, 9.9rem -1.52rem, 9.06rem 5.69rem, 9.88rem -3.26rem, 9.35rem 1.65rem, 9.93rem .22rem, 10.4rem -3.01rem, 9.7rem -5.82rem, 9.62rem -.89rem, 10.37rem 1.84rem, 9.45rem -3.12rem, 9.7rem -5.94rem, 9.83rem -4.06rem, 9.6rem 4.99rem, 10.25rem 1.01rem, 10.32rem 5.87rem, 10.14rem -5.87rem, 9.99rem -3.97rem, 9.51rem .61rem, 9.97rem 4.41rem, 9.09rem 3.15rem, 9.1rem -3.76rem, 10.04rem -4.69rem, 9.84rem 3.61rem, 9.57rem 3.08rem, 10.16rem 4.17rem, 9.2rem -4.49rem, 10.18rem -5.82rem, 9.15rem 5.4rem, 9.71rem 1.74rem, 9.02rem 3.08rem, 9.52rem 2.86rem, 9.18rem -4.7rem, 9.93rem 1.96rem, 9.23rem -.81rem, 9.93rem -4.77rem, 9.7rem 2.69rem, 10.32rem 4.05rem, 9.35rem 2.5rem, 9.17rem 3.93rem, 9.2rem 4.76rem, 9.95rem 2.13rem, 9.77rem 3.86rem, 9.68rem -1.06rem, 10.19rem 4.22rem, 9.34rem -.16rem, 9.84rem -.94rem, 9.42rem .99rem, 9.81rem 3.33rem, 10.16rem -.78rem, 10.14rem 3.79rem, 10.15rem 1.41rem, 9.64rem 3.18rem, 9.61rem 2.27rem, 9.7rem -4.77rem, 10.08rem 5.88rem, 9.99rem -2.87rem, 9.8rem 5rem, 10.28rem -.89rem, 9.36rem -.48rem, 9.11rem 5.71rem, 9.83rem 2.17rem, 10.48rem -4.82rem, 9.2rem -3.17rem, 10.4rem -1.55rem, 9.79rem .66rem, 10.43rem -2.86rem, 10.12rem 3.01rem, 9.88rem -.39rem, 10.11rem 2.38rem, 9.2rem -.92rem, 9.47rem 4.76rem, 9.7rem 1.38rem, 10.22rem -5.11rem, 10.32rem 1.64rem, 10.2rem 2.32rem, 10.06rem -2.93rem, 10.49rem 2.76rem, 9.85rem -.85rem, 9.6rem -5.31rem, 10.49rem 5.54rem, 9.61rem 5.31rem, 9.52rem 3.37rem, 9.32rem -5.29rem, 10.29rem -2.35rem, 9.32rem 4.05rem, 9.91rem 4.53rem, 9.39rem -4.15rem, 9.73rem -5.68rem, 9.81rem 5.81rem, 10.47rem 4.4rem, 9.74rem 2.44rem, 9.26rem .3rem, 9.86rem -5.2rem, 9.06rem -3.3rem, 10.18rem -3.03rem, -3.21rem 10.46rem, 1.88rem 9.82rem, -5.17rem 10.03rem, 1.27rem 10.12rem, 4.51rem 9.78rem, 3.59rem 10.21rem, -3.41rem 9.29rem, -.22rem 9.56rem, 2.44rem 9.23rem, 1.57rem 10.16rem, 2.17rem 10.3rem, -1.89rem 9.03rem, -5.55rem 10.04rem, -5.06rem 9.07rem, 3.35rem 10.3rem, .33rem 9.96rem, -5.34rem 10.32rem, -4.71rem 9.93rem, -3.32rem 9.87rem, -4.87rem 9.86rem, -4.44rem 9.58rem, 5.48rem 9.76rem, -.25rem 9.92rem, 1rem 9.56rem, -4.78rem 9.19rem, -4.07rem 9.41rem, 2.24rem 10.27rem, -5.37rem 9.94rem, -5.78rem 10.2rem, -5.42rem 9.39rem, -5.92rem 10.18rem, -5.29rem 9.13rem, -2.3rem 9.57rem, -.24rem 9.34rem, -2.71rem 9.57rem, 4rem 9.22rem, -1.66rem 9.23rem, -1.43rem 9.99rem, 4.63rem 9.86rem, 5.9rem 9.32rem, -3.88rem 10.31rem, 5.7rem 9.85rem, -4.35rem 9.66rem, 1.16rem 9.48rem, 2.4rem 9.29rem, -5.27rem 9.62rem, -1.51rem 9.86rem, -2.78rem 9.18rem, -1.91rem 10.01rem, -2.94rem 10.39rem, 1.4rem 9.05rem, 3.21rem 9.65rem, -1.96rem 10.46rem, -.46rem 9.53rem, 3.21rem 9.98rem, -4.21rem 9.84rem, -4.97rem 10.12rem, 4.06rem 9.37rem, -2.72rem 9.74rem, 3.94rem 9.86rem, 3.48rem 9.91rem, 2.82rem 9.59rem, -3.85rem 10.42rem, 1.73rem 9.64rem, -.18rem 9.54rem, 5.38rem 10.05rem, 1.74rem 10.29rem, 5.66rem 9.82rem, 3.9rem 10.35rem, -2.74rem 9.6rem, -.81rem 10.11rem, .72rem 9.19rem, -4.54rem 10.27rem, 4.85rem 9.32rem, -.02rem 10.4rem, -1.86rem 9.94rem, -3.08rem 9.3rem, 2.91rem 9.69rem, 4.02rem 9rem, 4.62rem 9.21rem, -2.98rem 9.4rem, -.82rem 10.15rem, 5.48rem 9.59rem, -4.7rem 10.09rem, -5.5rem 9.43rem, -5.31rem 10.06rem, -4.47rem 9.12rem, -4.27rem 10.21rem, 1.62rem 9.15rem, -4.78rem 9.52rem, -1.87rem 9.13rem, -4.07rem 10.07rem, 1.37rem 10.24rem, 3.23rem 9.12rem, 4.03rem 10.29rem, .82rem 9.5rem, 1.54rem 9.45rem, 1.79rem 9.12rem, -.85rem 10.49rem, -3.57rem -9.9rem, 5.93rem -9.42rem, -2.97rem -10.05rem, -4.98rem -10.46rem, -4.39rem -10.46rem, 5.78rem -9.4rem, .41rem -9.14rem, -1.11rem -9.41rem, -4.83rem -9.37rem, -3.48rem -9.42rem, 2.28rem -9.56rem, -1.89rem -9.02rem, -5.3rem -9.53rem, -4.06rem -10.24rem, -3.18rem -9.19rem, 5.15rem -9.18rem, 3.38rem -10.28rem, -3.21rem -10.19rem, 5.56rem -9.8rem, 1.29rem -9.18rem, -5.11rem -9.41rem, -3.28rem -9.41rem, -1.34rem -9.86rem, -5.26rem -9.46rem, 5.4rem -9.38rem, -2.19rem -9.45rem, -1.73rem -10.41rem, -5.01rem -9.55rem, 4.18rem -9.3rem, -3.37rem -9.76rem, -4.66rem -9.02rem, -3.66rem -10.19rem, 1.78rem -9.67rem, -1.29rem -9.61rem, 2.96rem -9.15rem, 1.43rem -10.27rem, -5.28rem -9.51rem, -5.76rem -9.04rem, 1.01rem -9.46rem, -1.17rem -9.48rem, -2.2rem -9.54rem, -5.29rem -10.08rem, 3.85rem -9.38rem, -.26rem -9.84rem, 3.24rem -9.69rem, -.01rem -9.36rem, 4.47rem -9.09rem, .17rem -9.15rem, -2.98rem -10.27rem, 4.13rem -10.41rem, 5.62rem -9.25rem, 2.41rem -9.11rem, .13rem -9.43rem, .16rem -10.42rem, 4.5rem -9.49rem, -4.29rem -10.17rem, 5.94rem -10.36rem, -3.78rem -10.35rem, 5.15rem -10.18rem, -3.33rem -10.42rem, -1.21rem -10.32rem, -4.72rem -10.4rem, -2.16rem -10.36rem, 4.85rem -9.83rem, -3.67rem -10.22rem, -4.05rem -9.19rem, -3.63rem -9.69rem, 2.62rem -9.64rem, -3.75rem -9.4rem, -2.22rem -9.1rem, 1.51rem -9.44rem, .24rem -10.4rem, 3.18rem -9.21rem, 1.7rem -9.61rem, 1.48rem -9.28rem, -3.6rem -9.66rem, -1.27rem -9.21rem, 5.17rem -9.68rem, 4.94rem -10.28rem, 4.71rem -9.37rem, -2.65rem -9.18rem, -5.29rem -9.17rem, 4.49rem -9.73rem, -3.49rem -9.47rem, -3.99rem -10.34rem, .37rem -9.54rem, -2.61rem -10.42rem, -.68rem -10.16rem, 2.36rem -9.01rem, .91rem -9.35rem, -.72rem -9.23rem, 2.9rem -10.14rem, -4.83rem -9.98rem, -4.82rem -9.25rem, -4.55rem -9.83rem, 3.91rem -9.06rem, -2.52rem -9.69rem, 2.21rem -9.33rem, -4.11rem -9.34rem;
   color: rgba(190, 190, 190, .25);
   content: "";
   display: block;
@@ -2077,13 +2071,13 @@ body {
 }
 
 .solar-jupiter > .solar-object {
-  width: 1.5rem;
+  width: 1.75rem;
 }
 
 .solar-jupiter > .solar-object::before {
   background: #e96b77;
-  height: 15rem;
-  width: 15rem;
+  height: 1.75rem;
+  width: 1.75rem;
 }
 
 .solar-jupiter.solar-caption:hover ~ .solar-system .solar-jupiter {
@@ -2093,14 +2087,14 @@ body {
 }
 
 .solar-saturn > .solar-object {
-  width: 1.33rem;
+  width: 1.54rem;
 }
 
 .solar-saturn > .solar-object::before {
   background: #e7a155;
-  box-shadow: 0 0 0 2rem #181818, 0 0 0 4rem rgba(231, 161, 85, .2), 0 0 0 5rem rgba(231, 161, 85, .1), 0 0 0 7rem rgba(231, 161, 85, .1);
-  height: 13.33rem;
-  width: 13.33rem;
+  box-shadow: 0 0 0 .2rem #181818, 0 0 0 .4rem rgba(231, 161, 85, .2), 0 0 0 .5rem rgba(231, 161, 85, .1), 0 0 0 .7rem rgba(231, 161, 85, .1);
+  height: 1.54rem;
+  width: 1.54rem;
 }
 
 .solar-saturn.solar-caption:hover ~ .solar-system .solar-saturn {
@@ -2110,13 +2104,13 @@ body {
 }
 
 .solar-uranus > .solar-object {
-  width: .86rem;
+  width: .95rem;
 }
 
 .solar-uranus > .solar-object::before {
   background: #86e5f8;
-  height: 8.63rem;
-  width: 8.63rem;
+  height: .95rem;
+  width: .95rem;
 }
 
 .solar-uranus.solar-caption:hover ~ .solar-system .solar-uranus {
@@ -2126,13 +2120,13 @@ body {
 }
 
 .solar-neptune > .solar-object {
-  width: .85rem;
+  width: .94rem;
 }
 
 .solar-neptune > .solar-object::before {
   background: #95b4fb;
-  height: 8.52rem;
-  width: 8.52rem;
+  height: .94rem;
+  width: .94rem;
 }
 
 .solar-neptune.solar-caption:hover ~ .solar-system .solar-neptune {
@@ -2178,14 +2172,14 @@ body {
 }
 
 .solar-caption .solar-object::before {
-  border: 1rem solid rgba(24, 24, 24, .15);
+  border: .1rem solid rgba(24, 24, 24, .15);
   border-radius: 50%;
   content: "";
   display: block;
   left: 50%;
   position: absolute;
   top: 50%;
-  transform: translate3d(-50%, -50%, 0) scale(.1);
+  transform: translate3d(-50%, -50%, 0);
 }
 
 .solar-caption .solar-name {
@@ -2270,4 +2264,5 @@ body {
   display: block;
   position: fixed;
   right: 1rem;
+  z-index: 9999;
 }
