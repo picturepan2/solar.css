@@ -12,8 +12,10 @@ block content
   .solar-system-header
     a.solar-brand(href= url, target="_blank") SOLAR.CSS
     a.solar-github(href="https://github.com/picturepan2/solar.css", target="_blank") GITHUB
-  //.solar-system-controls
-    label.btn.btn-sm.ml-2(for="solar-3dswitch") 3D Mode
+  .solar-system-controls
+    label.form-switch3d(for="solar-3dswitch")
+      i.form-icon
+      | 3D Mode
   //- Cards
   .solar-container
     .solar-caption.solar-mercury
