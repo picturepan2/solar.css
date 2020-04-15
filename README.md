@@ -4,7 +4,7 @@
 ### Exploration
 - Solar system: The planets, objects and orbits around the Sun are illustrated by pure CSS at scale for their relative sizes.
 - Distances to the Sun are mathematically scaled and positioned for ideal view.
-- Animation durations are timely scaled relative to the Earth year by true sidereal periods. One Earth year in the animation is 5 seconds.
+- Animation durations are timely scaled relative to the Earth year by true sidereal periods. One Earth year in the animation is 10 seconds.
 - The Asteroid belt is generated with pure CSS.
 - 3D Mode is in development.
 - Some fun micro-animations.

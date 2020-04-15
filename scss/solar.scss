@@ -80,35 +80,9 @@ body {
   left: 0;
   position: fixed;
   top: 0;
+  transition: all .5s ease-in-out;
   width: 100vw;
   z-index: -1;
-
-  &.solar-3d {
-    perspective: 50rem;
-    transform: rotateX(70deg) scale(1.5);
-    transform-style: preserve-3d;
-
-    .solar-orbit {
-      animation: none !important;
-      
-      .solar-object {
-        //transform: translate3d(-50%, -50%, 0) rotateX(-65deg) rotateY(245deg) rotateZ(0);
-        transform-style: preserve-3d;
-      }
-
-      &.solar-saturn {
-        //animation: orbit ($base-period * $saturn-period) linear infinite !important;
-        //transform: translate3d(-50%, -50%, 0) rotateZ(-180deg);
-
-        .solar-object {
-          //animation: rotation ($base-period * $saturn-period) linear infinite;
-          //- 90 transform: translate3d(-50%, -50%, 0) rotateX(-65deg) rotateY(180deg) rotateZ(0);
-          //- 180 transform: translate3d(-50%, -50%, 0) rotateX(-180deg) rotateY(245deg) rotateZ(0);
-          transform: translate3d(-50%, -50%, 0) rotateX(-90deg) rotateY(180deg) rotateZ(0);
-        }
-      }
-    }
-  }
 }
 
 .solar-orbit {
@@ -134,7 +108,7 @@ body {
     width: 0 !important;
     
     &::before {
-      border: .1rem solid rgba($dark-color, .15);
+      border: .1rem solid rgba($dark-color, .25);
       border-radius: 50%;
       content: "";
       display: block;
@@ -574,6 +548,103 @@ body {
   }
 }
 
+// 3D
+.solar-3dswitch {
+  &:checked {
+    ~ .solar-container .solar-system {
+      transform: rotateX(75deg);
+      transform-style: preserve-3d;
+      
+      .solar-orbit {
+        transform: translate3d(-50%, -50%, 0) rotateZ(0);
+        transform-style: preserve-3d;
+    
+        .solar-object {
+          transform: rotateX(-90deg) rotateY(0) rotateZ(0);
+          transform-style: preserve-3d;
+          transition: all .5s ease-in-out;
+        }
+    
+        .solar-asteroidbelt {
+          transform-style: preserve-3d;
+        }
+
+        // Mercury
+        &.solar-mercury {
+          animation: orbit3d ($base-period * $mercury-period) linear infinite;
+
+          .solar-object {
+            animation: rotation3d ($base-period * $mercury-period) linear infinite;
+          }
+        }
+
+        // Venus
+        &.solar-venus {
+          animation: orbit3d ($base-period * $venus-period) linear infinite;
+
+          .solar-object {
+            animation: rotation3d ($base-period * $venus-period) linear infinite;
+          }
+        }
+
+        // Earth
+        &.solar-earth {
+          animation: orbit3d ($base-period * $earth-period) linear infinite;
+
+          & > .solar-object {
+            animation: rotation3d ($base-period * $earth-period) linear infinite;
+          }
+        }
+
+        // Mars
+        &.solar-mars {
+          animation: orbit3d ($base-period * $mars-period) linear infinite;
+
+          .solar-object {
+            animation: rotation3d ($base-period * $mars-period) linear infinite;
+          }
+        }
+
+        // Jupiter
+        &.solar-jupiter {
+          animation: orbit3d ($base-period * $jupiter-period) linear infinite;
+
+          .solar-object {
+            animation: rotation3d ($base-period * $jupiter-period) linear infinite;
+          }
+        }
+
+        // Saturn
+        &.solar-saturn {
+          animation: orbit3d ($base-period * $saturn-period) linear infinite;
+
+          .solar-object {
+            animation: rotation3d ($base-period * $saturn-period) linear infinite;
+          }
+        }
+
+        // Uranus
+        &.solar-uranus {
+          animation: orbit3d ($base-period * $uranus-period) linear infinite;
+
+          .solar-object {
+            animation: rotation3d ($base-period * $uranus-period) linear infinite;
+          }
+        }
+
+        // Neptune
+        &.solar-neptune {
+          animation: orbit3d ($base-period * $neptune-period) linear infinite;
+
+          .solar-object {
+            animation: rotation3d ($base-period * $neptune-period) linear infinite;
+          }
+        }
+      }
+    }
+  }
+}
+
 // Main
 .solar-system-header {
   align-items: center;
@@ -608,6 +679,12 @@ body {
       opacity: .75;
     }
   }
+}
+
+.solar-system-controls {
+  position: fixed;
+  top: 4rem;
+  z-index: 99999;
 }
 
 .solar-ads {

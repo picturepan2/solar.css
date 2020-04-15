@@ -456,7 +456,7 @@ dl dd {
   appearance: none;
   background: transparent;
   border: .05rem solid #fff;
-  border-radius: 1.6rem;
+  border-radius: .1rem;
   color: #fff;
   cursor: pointer;
   display: inline-block;
@@ -1171,12 +1171,21 @@ dl dd {
   }
 }
 
-@keyframes rotation {
+@keyframes orbit3d {
   0% {
-    transform: translate3d(-50%, -50%, 0) rotateX(-180deg) rotateY(245deg);
+    transform: translate3d(-50%, -50%, 0) rotateZ(0);
   }
   100% {
-    transform: translate3d(-50%, -50%, 0) rotateX(-180deg) rotateY(245deg);
+    transform: translate3d(-50%, -50%, 0) rotateZ(-360deg);
+  }
+}
+
+@keyframes rotation3d {
+  0% {
+    transform: rotateX(-90deg) rotateY(360deg) rotateZ(0);
+  }
+  100% {
+    transform: rotateX(-90deg) rotateY(0) rotateZ(0);
   }
 }
 
