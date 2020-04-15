@@ -6,7 +6,7 @@
 - Distances to the Sun are mathematically scaled and positioned for ideal view.
 - Animation durations are timely scaled relative to the Earth year by true sidereal periods. One Earth year in the animation is 10 seconds.
 - The Asteroid belt is generated with pure CSS.
-- 3D Mode is in development.
+- Solar System in 3D Mode.
 - Some fun micro-animations.
 
 If you enjoy it, please consider [donating via Paypal](https://www.paypal.me/picturepan2) or [Buy me a coffee](https://www.buymeacoffee.com/yanzhu).

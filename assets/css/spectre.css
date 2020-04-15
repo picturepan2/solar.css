@@ -295,20 +295,20 @@ body {
 }
 
 a {
-  color: #fa6d00;
+  color: #fff;
   outline: none;
   text-decoration: none;
 }
 
 a:focus {
-  box-shadow: 0 0 0 .1rem rgba(250, 109, 0, .2);
+  box-shadow: 0 0 0 .1rem rgba(255, 255, 255, .2);
 }
 
 a:focus,
 a:hover,
 a:active,
 a.active {
-  color: #c75700;
+  color: #e6e6e6;
   text-decoration: none;
 }
 
@@ -455,9 +455,9 @@ dl dd {
   -moz-appearance: none;
   appearance: none;
   background: transparent;
-  border: .05rem solid #fa6d00;
+  border: .05rem solid #fff;
   border-radius: .1rem;
-  color: #fa6d00;
+  color: #fff;
   cursor: pointer;
   display: inline-block;
   font-size: .8rem;
@@ -477,21 +477,21 @@ dl dd {
 }
 
 .btn:focus {
-  box-shadow: 0 0 0 .1rem rgba(250, 109, 0, .2);
+  box-shadow: 0 0 0 .1rem rgba(255, 255, 255, .2);
 }
 
 .btn:focus,
 .btn:hover {
-  background: #fa6d00;
-  border-color: #eb6600;
+  background: #fff;
+  border-color: #f7f7f7;
   color: #fff;
   text-decoration: none;
 }
 
 .btn:active,
 .btn.active {
-  background: #eb6600;
-  border-color: #d15b00;
+  background: #f7f7f7;
+  border-color: #ebebeb;
   color: #fff;
   text-decoration: none;
 }
@@ -511,23 +511,23 @@ dl dd {
 }
 
 .btn.btn-primary {
-  background: #fa6d00;
-  border-color: #eb6600;
-  box-shadow: 0 .1rem 1rem rgba(250, 109, 0, .45);
+  background: #fff;
+  border-color: #f7f7f7;
+  box-shadow: 0 .1rem 1rem rgba(255, 255, 255, .45);
   color: #fff;
 }
 
 .btn.btn-primary:focus,
 .btn.btn-primary:hover {
-  background: #e16200;
-  border-color: #d15b00;
+  background: #f2f2f2;
+  border-color: #ebebeb;
   color: #fff;
 }
 
 .btn.btn-primary:active,
 .btn.btn-primary.active {
-  background: #d65d00;
-  border-color: #c75700;
+  background: #ededed;
+  border-color: #e6e6e6;
   color: #fff;
 }
 
@@ -665,13 +665,13 @@ dl dd {
 }
 
 .label.label-primary {
-  background: #fa6d00;
+  background: #fff;
   color: #fff;
 }
 
 .label.label-secondary {
   background: #dedede;
-  color: #fa6d00;
+  color: #fff;
 }
 
 .label.label-success {
@@ -1190,16 +1190,16 @@ dl dd {
 }
 
 .text-primary {
-  color: #fa6d00 !important;
+  color: #fff !important;
 }
 
 a.text-primary:focus,
 a.text-primary:hover {
-  color: #e16200;
+  color: #f2f2f2;
 }
 
 a.text-primary:visited {
-  color: #ff7b15;
+  color: white;
 }
 
 .text-secondary {
@@ -1294,8 +1294,7 @@ a.text-error:visited {
 }
 
 .bg-primary {
-  background: #fa6d00 !important;
-  color: #fff;
+  background: #fff !important;
 }
 
 .bg-secondary {
@@ -1465,7 +1464,7 @@ a.text-error:visited {
 
 .loading::after {
   animation: loading 500ms infinite linear;
-  border: .1rem solid #fa6d00;
+  border: .1rem solid #fff;
   border-radius: 50%;
   border-right-color: transparent;
   border-top-color: transparent;
